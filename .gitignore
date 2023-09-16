@@ -1,0 +1,12 @@
+# MAX+plus II Manager
+**/*.acf
+**/*.cnf
+**/*.fit
+**/*.hif
+**/*.mmf
+**/*.ndb
+**/*.pin
+**/*.pof
+**/*.rpt
+**/*.sym
+**/*.snf
