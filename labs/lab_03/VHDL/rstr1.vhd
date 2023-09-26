@@ -1,15 +1,15 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY rs_trigger1 IS
+ENTITY rstr1 IS
     PORT(
         s : IN std_logic;
         r : IN std_logic;
         q : OUT std_logic
     );
-END rs_trigger1;
+END rstr1;
 
-ARCHITECTURE rs_trigger1_behaviour OF rs_trigger1 IS
+ARCHITECTURE behav OF rstr1 IS
     SIGNAL qs:std_logic;
 BEGIN
     PROCESS (s,r)
@@ -25,4 +25,4 @@ BEGIN
         END IF;
     END PROCESS;
     q<=qs;
-END rs_trigger1_behaviour;
+END behav;

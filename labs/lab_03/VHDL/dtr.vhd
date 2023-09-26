@@ -5,7 +5,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
 -- Имя файла должно совпадать с указанным тут названием
-ENTITY my_011_lab_03_nand2 IS
+ENTITY notand IS
     -- Описание входов и выходов устройства
     -- - IN - выход
     -- - OUT - выход
@@ -15,9 +15,9 @@ ENTITY my_011_lab_03_nand2 IS
         b : IN std_logic;
         c : OUT std_logic
     );
-END my_011_lab_03_nand2;
+END notand;
 
-ARCHITECTURE my_011_lab_03_nand2_behaviour OF my_011_lab_03_nand2 IS
+ARCHITECTURE behavior OF notand IS
 BEGIN
     c <= NOT ( a AND b );
-END my_011_lab_03_nand2_behaviour;
+END behavior;
