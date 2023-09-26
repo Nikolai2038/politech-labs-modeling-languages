@@ -13,7 +13,7 @@ ENTITY notand IS
     PORT(
         a : IN std_logic;
         b : IN std_logic;
-        c : OUT std_logic
+        c : INOUT std_logic
     );
 END notand;
 
