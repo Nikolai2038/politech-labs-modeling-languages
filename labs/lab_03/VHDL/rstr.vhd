@@ -24,6 +24,7 @@ BEGIN
     u1: notand
     -- указание входов и выхода для u1
     PORT MAP (s, qb, q);
+
     u2: notand
     PORT MAP (q, r, qb);
 END behav;

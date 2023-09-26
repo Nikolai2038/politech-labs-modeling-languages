@@ -1,23 +1,53 @@
--- Подключение библиотеки ieee
 LIBRARY ieee;
-
--- Использование библиотечного модуля, содержащего дополнительные типы переменных
 USE ieee.std_logic_1164.ALL;
 
--- Имя файла должно совпадать с указанным тут названием
-ENTITY notand IS
-    -- Описание входов и выходов устройства
-    -- - IN - выход
-    -- - OUT - выход
-    -- - INOUT - двунаправленный сигнал
+ENTITY dtr IS
     PORT(
-        a : IN std_logic;
-        b : IN std_logic;
-        c : OUT std_logic
+        d : IN std_logic;
+        l : IN std_logic;
+        q : INOUT std_logic;
+        qb : INOUT std_logic
     );
-END notand;
+END dtr;
 
-ARCHITECTURE behavior OF notand IS
+ARCHITECTURE behav OF dtr IS
+    COMPONENT notand
+        PORT(
+            a : IN std_logic;
+            b : IN std_logic;
+            c : INOUT std_logic
+        );
+    END COMPONENT;
+
+    COMPONENT rstr
+        PORT(
+            s : IN std_logic;
+            r : IN std_logic;
+            q : INOUT std_logic;
+            qb : INOUT std_logic
+        );
+    END COMPONENT;
 BEGIN
-    c <= NOT ( a AND b );
-END behavior;
+    -- указание u1, как компонента notand
+    u1: notand
+    -- указание входов и выхода для u1
+    PORT MAP (d, l, s);
+
+    u2: notand
+    PORT MAP (s, l, r);
+
+    u3: rstr
+    PORT MAP (s, r, q, qb);
+END behav;
+
+CONFIGURATION con OF dtr IS
+    FOR behav
+        FOR u1, u2: notand
+            USE ENTITY work.notand (behavior);
+        END FOR;
+
+        FOR u3: rstr
+            USE ENTITY work.rstr (behavior);
+        END FOR;
+    END FOR;
+END con;
