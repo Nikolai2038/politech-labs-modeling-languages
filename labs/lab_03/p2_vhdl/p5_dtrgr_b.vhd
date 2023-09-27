@@ -14,7 +14,7 @@ ARCHITECTURE behav OF p5_dtrgr_b IS
 BEGIN
     PROCESS (d, l)
     BEGIN
-        IF l='1' THEN
+        IF l = '1' THEN
             qs <= qs;
         ELSE
             qs <= d;

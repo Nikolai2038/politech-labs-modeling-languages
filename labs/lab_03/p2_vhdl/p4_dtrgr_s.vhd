@@ -28,16 +28,9 @@ ARCHITECTURE behav OF p4_dtrgr_s IS
         );
     END COMPONENT;
 BEGIN
-    -- указание u1, как компонента p1_nand2_b
-    u1: p1_nand2_b
-    -- указание входов и выхода для u1
-    PORT MAP (d, l, s);
-
-    u2: p1_nand2_b
-    PORT MAP (s, l, r);
-
-    u3: p2_rstrgr_s
-    PORT MAP (s, r, q, qb);
+    u1: p1_nand2_b  PORT MAP (d, l, s);
+    u2: p1_nand2_b  PORT MAP (s, l, r);
+    u3: p2_rstrgr_s PORT MAP (s, r, q, qb);
 END behav;
 
 CONFIGURATION con OF p4_dtrgr_s IS

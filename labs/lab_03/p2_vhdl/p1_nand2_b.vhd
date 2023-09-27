@@ -19,5 +19,5 @@ END p1_nand2_b;
 
 ARCHITECTURE behavior OF p1_nand2_b IS
 BEGIN
-    c <= NOT ( a AND b );
+    c <= NOT (a AND b);
 END behavior;

@@ -12,17 +12,17 @@ END p3_rstrgr_b;
 ARCHITECTURE behav OF p3_rstrgr_b IS
     SIGNAL qs:std_logic;
 BEGIN
-    PROCESS (s,r)
+    PROCESS (s, r)
     BEGIN
-        IF s='1' THEN
-            IF r='1' THEN
-                qs<=qs;
+        IF s = '1' THEN
+            IF r = '1' THEN
+                qs <= qs;
             ELSE
-                qs<='0';
+                qs <= '0';
             END IF;
         ELSE
-            qs<='1';
+            qs <= '1';
         END IF;
     END PROCESS;
-    q<=qs;
+    q <= qs;
 END behav;
