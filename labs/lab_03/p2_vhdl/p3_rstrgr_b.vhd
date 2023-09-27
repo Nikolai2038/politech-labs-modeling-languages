@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
 ENTITY p3_rstrgr_b IS
-    PORT(
+    PORT (
         s : IN std_logic;
         r : IN std_logic;
         q : OUT std_logic;
@@ -10,11 +10,10 @@ ENTITY p3_rstrgr_b IS
     );
 END p3_rstrgr_b;
 
-ARCHITECTURE behav OF p3_rstrgr_b IS
+ARCHITECTURE p3_rstrgr_b_behaviour OF p3_rstrgr_b IS
     SIGNAL qs:std_logic;
 BEGIN
-    PROCESS (s, r)
-    BEGIN
+    PROCESS (s, r) BEGIN
         IF s = '1' THEN
             IF r = '1' THEN
                 qs <= qs;
@@ -25,6 +24,7 @@ BEGIN
             qs <= '1';
         END IF;
     END PROCESS;
+
     q <= qs;
     qb <= NOT qs;
-END behav;
+END p3_rstrgr_b_behaviour;
