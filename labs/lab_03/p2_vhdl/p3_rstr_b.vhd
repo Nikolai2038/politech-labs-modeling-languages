@@ -1,15 +1,15 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY rstr1 IS
+ENTITY p3_rstr_b IS
     PORT(
         s : IN std_logic;
         r : IN std_logic;
         q : OUT std_logic
     );
-END rstr1;
+END p3_rstr_b;
 
-ARCHITECTURE behav OF rstr1 IS
+ARCHITECTURE behav OF p3_rstr_b IS
     SIGNAL qs:std_logic;
 BEGIN
     PROCESS (s,r)

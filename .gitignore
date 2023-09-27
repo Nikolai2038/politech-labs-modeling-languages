@@ -10,4 +10,6 @@
 **/*.rpt
 **/*.snf
 **/*.dls
-**/VHDL/*.sym
+
+# VHDL automatically compiles symbols, so we ignore them to not have them changed every time
+**/*vhdl/*.sym

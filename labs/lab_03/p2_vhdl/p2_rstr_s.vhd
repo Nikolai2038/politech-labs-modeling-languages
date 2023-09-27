@@ -1,18 +1,18 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY rstr IS
+ENTITY p2_rstr_s IS
     PORT(
         s : IN std_logic;
         r : IN std_logic;
         q : INOUT std_logic;
         qb : INOUT std_logic
     );
-END rstr;
+END p2_rstr_s;
 
-ARCHITECTURE behav OF rstr IS
+ARCHITECTURE behav OF p2_rstr_s IS
     -- описание используемого компонента
-    COMPONENT notand
+    COMPONENT p1_nand2_b
         PORT(
             a : IN std_logic;
             b : IN std_logic;
@@ -20,20 +20,20 @@ ARCHITECTURE behav OF rstr IS
         );
     END COMPONENT;
 BEGIN
-    -- указание u1, как компонента notand
-    u1: notand
+    -- указание u1,p1_notandомпонента notand
+    u1: p1_nand2_b
     -- указание входов и выхода для u1
     PORT MAP (s, qb, q);
 
-    u2: notand
+    u2: p1_nand2_b
     PORT MAP (q, r, qb);
 END behav;
 
-CONFIGURATION con OF rstr IS
+CONFIGURATION con OF p2_rstr_s IS
     FOR behav
-        FOR u1, u2: notand
-            -- определяет интерфейс и модель компонента notand
-            USE ENTITY work.notand (behavior);
+        FOR u1, u2: p1_nand2_b
+            -- определяет интеp1_notandи модель компонента notand
+            USE ENTITY work.p1_nand2_b (behavior);
         END FOR;
     END FOR;
 END con;

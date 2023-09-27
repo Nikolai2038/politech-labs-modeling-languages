@@ -1,17 +1,17 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY dtr IS
+ENTITY p4_dtr_s IS
     PORT(
         d : IN std_logic;
         l : IN std_logic;
         q : INOUT std_logic;
         qb : INOUT std_logic
     );
-END dtr;
+END p4_dtr_s;
 
-ARCHITECTURE behav OF dtr IS
-    COMPONENT notand
+ARCHITECTURE behav OF p4_dtr_s IS
+    COMPONENT p1_nand2_b
         PORT(
             a : IN std_logic;
             b : IN std_logic;
@@ -19,7 +19,7 @@ ARCHITECTURE behav OF dtr IS
         );
     END COMPONENT;
 
-    COMPONENT rstr
+    COMPONENT p2_rstr_s
         PORT(
             s : IN std_logic;
             r : IN std_logic;
@@ -28,26 +28,26 @@ ARCHITECTURE behav OF dtr IS
         );
     END COMPONENT;
 BEGIN
-    -- указание u1, как компонента notand
-    u1: notand
+    -- указание u1, как компонента p1_nand2_b
+    u1: p1_nand2_b
     -- указание входов и выхода для u1
     PORT MAP (d, l, s);
 
-    u2: notand
+    u2: p1_nand2_b
     PORT MAP (s, l, r);
 
-    u3: rstr
+    u3: p2_rstr_s
     PORT MAP (s, r, q, qb);
 END behav;
 
-CONFIGURATION con OF dtr IS
+CONFIGURATION con OF p4_dtr_s IS
     FOR behav
-        FOR u1, u2: notand
-            USE ENTITY work.notand (behavior);
+        FOR u1, u2: p1_nand2_b
+            USE ENTITY work.p1_nand2_b (behavior);
         END FOR;
 
-        FOR u3: rstr
-            USE ENTITY work.rstr (behavior);
+        FOR u3: p2_rstr_s
+            USE ENTITY work.p2_rstr_s (behavior);
         END FOR;
     END FOR;
 END con;

@@ -5,7 +5,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
 -- Имя файла должно совпадать с указанным тут названием
-ENTITY notand IS
+ENTITY p1_nand2_b IS
     -- Описание входов и выходов устройства
     -- - IN - выход
     -- - OUT - выход
@@ -15,9 +15,9 @@ ENTITY notand IS
         b : IN std_logic;
         c : INOUT std_logic
     );
-END notand;
+END p1_nand2_b;
 
-ARCHITECTURE behavior OF notand IS
+ARCHITECTURE behavior OF p1_nand2_b IS
 BEGIN
     c <= NOT ( a AND b );
 END behavior;
