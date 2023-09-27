@@ -11,7 +11,7 @@ ENTITY p2_rstrgr_s IS
 END p2_rstrgr_s;
 
 ARCHITECTURE behav OF p2_rstrgr_s IS
-    -- Описание используемого компонента
+    -- Формальное описание используемого компонента
     COMPONENT p1_nand2_b
         PORT(
             a : IN std_logic;
@@ -20,15 +20,16 @@ ARCHITECTURE behav OF p2_rstrgr_s IS
         );
     END COMPONENT;
 BEGIN
-    -- Указание u1 и u2 как компонентов p1_nand2_b, а также указание их входов и выходов
-    u1: p1_nand2_b PORT MAP (s, qb, q);
-    u2: p1_nand2_b PORT MAP (q, r, qb);
+    -- Указание unit_1 и unit_2 как компонентов p1_nand2_b, а также указание их входов и выходов
+    unit_1: p1_nand2_b PORT MAP (s, qb, q);
+    unit_2: p1_nand2_b PORT MAP (q, r, qb);
 END behav;
 
 CONFIGURATION con OF p2_rstrgr_s IS
     FOR behav
-        FOR u1, u2: p1_nand2_b
+        FOR unit_1, unit_2: p1_nand2_b
             -- Определяет интерфейс и модель компонента p1_nand2_b
+            -- work - текущая рабочая директория
             USE ENTITY work.p1_nand2_b (behavior);
         END FOR;
     END FOR;

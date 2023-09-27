@@ -5,7 +5,8 @@ ENTITY p3_rstrgr_b IS
     PORT(
         s : IN std_logic;
         r : IN std_logic;
-        q : OUT std_logic
+        q : OUT std_logic;
+        qb : OUT std_logic
     );
 END p3_rstrgr_b;
 
@@ -25,4 +26,5 @@ BEGIN
         END IF;
     END PROCESS;
     q <= qs;
+    qb <= NOT qs;
 END behav;

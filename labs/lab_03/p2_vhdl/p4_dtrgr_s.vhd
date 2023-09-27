@@ -28,18 +28,18 @@ ARCHITECTURE behav OF p4_dtrgr_s IS
         );
     END COMPONENT;
 BEGIN
-    u1: p1_nand2_b  PORT MAP (d, l, s);
-    u2: p1_nand2_b  PORT MAP (s, l, r);
-    u3: p2_rstrgr_s PORT MAP (s, r, q, qb);
+    unit_1: p1_nand2_b  PORT MAP (d, l, s);
+    unit_2: p1_nand2_b  PORT MAP (s, l, r);
+    unit_3: p2_rstrgr_s PORT MAP (s, r, q, qb);
 END behav;
 
 CONFIGURATION con OF p4_dtrgr_s IS
     FOR behav
-        FOR u1, u2: p1_nand2_b
+        FOR unit_1, unit_2: p1_nand2_b
             USE ENTITY work.p1_nand2_b (behavior);
         END FOR;
 
-        FOR u3: p2_rstrgr_s
+        FOR unit_3: p2_rstrgr_s
             USE ENTITY work.p2_rstrgr_s (behavior);
         END FOR;
     END FOR;
