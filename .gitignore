@@ -1,3 +1,9 @@
+# JetBrains products
+.idea
+
+# VS Code
+.vscode
+
 # MAX+plus II Manager
 **/*.acf
 **/*.cnf
