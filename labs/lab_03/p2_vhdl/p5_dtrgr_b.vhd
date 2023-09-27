@@ -1,15 +1,15 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
-ENTITY p5_dtr_b IS
+ENTITY p5_dtrgr_b IS
     PORT(
         d : IN std_logic;
         l : IN std_logic;
         q : INOUT std_logic
     );
-END p5_dtr_b;
+END p5_dtrgr_b;
 
-ARCHITECTURE behav OF p5_dtr_b IS
+ARCHITECTURE behav OF p5_dtrgr_b IS
     SIGNAL qs:std_logic;
 BEGIN
     PROCESS (d, l)
