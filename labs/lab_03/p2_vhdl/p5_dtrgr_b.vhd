@@ -13,7 +13,7 @@ END p5_dtrgr_b;
 ARCHITECTURE p5_dtrgr_b_behaviour OF p5_dtrgr_b IS
     SIGNAL qs:std_logic;
 BEGIN
-    PROCESS (d, l) BEGIN
+    PROCESS BEGIN
         IF l = '1' THEN
             qs <= qs;
         ELSE
