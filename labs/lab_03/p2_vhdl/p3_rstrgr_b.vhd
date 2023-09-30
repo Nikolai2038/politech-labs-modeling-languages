@@ -1,7 +1,11 @@
+-- Подключение библиотеки ieee
 LIBRARY ieee;
+
+-- Использование библиотечного модуля, содержащего дополнительные типы переменных
 USE ieee.std_logic_1164.ALL;
 
 ENTITY p3_rstrgr_b IS
+    -- Описание входов и выходов устройства
     PORT (
         s : IN std_logic;
         r : IN std_logic;

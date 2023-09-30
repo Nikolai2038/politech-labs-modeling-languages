@@ -1,7 +1,11 @@
+-- Подключение библиотеки ieee
 LIBRARY ieee;
+
+-- Использование библиотечного модуля, содержащего дополнительные типы переменных
 USE ieee.std_logic_1164.ALL;
 
 ENTITY p4_dtrgr_s IS
+    -- Описание входов и выходов устройства
     PORT (
         d : IN std_logic;
         l : IN std_logic;
@@ -27,6 +31,9 @@ ARCHITECTURE p4_dtrgr_s_behaviour OF p4_dtrgr_s IS
             qb : INOUT std_logic
         );
     END COMPONENT;
+
+    SIGNAL s:std_logic;
+    SIGNAL r:std_logic;
 BEGIN
     unit_1: p1_nand2_b  PORT MAP (d, l, s);
     unit_2: p1_nand2_b  PORT MAP (s, l, r);
