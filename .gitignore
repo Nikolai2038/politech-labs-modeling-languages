@@ -1,21 +1,27 @@
-# JetBrains products
-.idea
+# Ignore all files except needed
+**/*.*
 
-# VS Code
-.vscode
+# Gitignore files
+!**/.gitignore
 
-# MAX+plus II Manager
-**/*.acf
-**/*.cnf
-**/*.fit
-**/*.hif
-**/*.mmf
-**/*.ndb
-**/*.pin
-**/*.pof
-**/*.rpt
-**/*.snf
-**/*.dls
+# Markdown files (README.md)
+!**/*.md
 
+# Graphic files
+!**/*.gdf
+
+# Waveform files
+!**/*.scf
+
+# VHDL files
+!**/*.vhd
+
+# Symbol files
+!**/*.sym
 # VHDL automatically compiles symbols, so we ignore them to not have them changed every time
 **/*vhdl/*.sym
+
+# Quartus II 5.0 project files
+!**/*.qpf
+!**/*.qsf
+!**/*.db_info
