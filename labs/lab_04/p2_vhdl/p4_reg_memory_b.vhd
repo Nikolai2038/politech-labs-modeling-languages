@@ -35,7 +35,7 @@ ARCHITECTURE p4_reg_memory_b_behaviour OF p4_reg_memory_b IS
     SIGNAL qs7:std_logic;
     SIGNAL qs8:std_logic;
 BEGIN
-    PROCESS (x1, x2, x3, x4) BEGIN
+    PROCESS (write, reset) BEGIN
         IF reset = '0' THEN
             qs1 <= '0';
             qs3 <= '0';

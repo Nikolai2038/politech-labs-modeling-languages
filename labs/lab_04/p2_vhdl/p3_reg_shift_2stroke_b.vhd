@@ -24,17 +24,23 @@ ARCHITECTURE p3_reg_shift_2stroke_b_behaviour OF p3_reg_shift_2stroke_b IS
     SIGNAL qs3:std_logic;
     SIGNAL qs4:std_logic;
 BEGIN
-    PROCESS (d) BEGIN
+    PROCESS (c1, r) BEGIN
         IF r = '0' THEN
             qs1 <= '0';
-            qs2 <= '0';
             qs3 <= '0';
-            qs4 <= '0';
         ELSE
             IF c1 = '1' THEN
                 qs1 <= d;
                 qs3 <= qs2;
             END IF;
+        END IF;
+    END PROCESS;
+
+    PROCESS (c2, r) BEGIN
+        IF r = '0' THEN
+            qs2 <= '0';
+            qs4 <= '0';
+        ELSE
             IF c2 = '1' THEN
                 qs2 <= qs1;
                 qs4 <= qs3;

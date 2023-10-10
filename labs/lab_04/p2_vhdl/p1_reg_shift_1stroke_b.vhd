@@ -23,7 +23,7 @@ ARCHITECTURE p1_reg_shift_1stroke_b_behaviour OF p1_reg_shift_1stroke_b IS
     SIGNAL qs3:std_logic;
     SIGNAL qs4:std_logic;
 BEGIN
-    PROCESS (d) BEGIN
+    PROCESS (c, r) BEGIN
         IF r = '0' THEN
             qs1 <= '0';
             qs2 <= '0';
