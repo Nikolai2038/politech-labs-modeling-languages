@@ -1,6 +1,7 @@
 LIBRARY ieee;
 
 USE ieee.std_logic_1164.ALL;
+
 -- Для std_logic_vector
 use ieee.std_logic_unsigned.all;
 
