@@ -1,6 +1,8 @@
 LIBRARY ieee;
 
 USE ieee.std_logic_1164.ALL;
+-- Äëÿ std_logic_vector
+use ieee.std_logic_unsigned.all;
 
 ENTITY p3_four_digit_counter_b IS
     PORT (
@@ -15,22 +17,22 @@ ENTITY p3_four_digit_counter_b IS
 END p3_four_digit_counter_b;
 
 ARCHITECTURE p3_four_digit_counter_b_behaviour OF p3_four_digit_counter_b IS
-    signal count : integer range 0 to 15 := 0;
+    signal qs: std_logic_vector(3 downto 0);
 BEGIN
     PROCESS (r, c) BEGIN
         IF r = '1' THEN
-            count <= 0;
+            qs <= "0000";
         ELSIF c = '1' AND c'event THEN
             IF jk = '1' THEN
-                count <= count + 1;
+                qs <= qs + 1;
             ELSE
-                count <= count;
+                qs <= qs;
             END IF;
         END IF;
     END PROCESS;
 
-    q0 <= '1' when (count >= 1) else '0';
-    q1 <= '1' when (count >= 2) else '0';
-    q2 <= '1' when (count >= 4) else '0';
-    q3 <= '1' when (count >= 8) else '0';
+    q0 <= qs(0);
+    q1 <= qs(1);
+    q2 <= qs(2);
+    q3 <= qs(3);
 END p3_four_digit_counter_b_behaviour;
