@@ -2,15 +2,15 @@ LIBRARY IEEE;
 
 USE IEEE.std_logic_1164.ALL;
 
-ENTITY p1_dc_3to8 IS
+ENTITY p1_dc_3to8_b IS
     PORT (
         a : IN std_logic_vector (2 DOWNTO 0);
         enabled : IN std_logic;
         q : OUT std_logic_vector (7 DOWNTO 0)
     );
-END p1_dc_3to8;
+END p1_dc_3to8_b;
 
-ARCHITECTURE p1_dc_3to8_behaviour OF p1_dc_3to8 IS
+ARCHITECTURE p1_dc_3to8_b_behaviour OF p1_dc_3to8_b IS
     signal qs : std_logic_vector (7 downto 0);
 BEGIN
     PROCESS (a, enabled) BEGIN
@@ -33,4 +33,4 @@ BEGIN
     END PROCESS;
 
     q <= qs;
-END p1_dc_3to8_behaviour;
+END p1_dc_3to8_b_behaviour;

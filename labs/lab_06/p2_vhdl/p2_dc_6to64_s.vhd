@@ -2,15 +2,15 @@ LIBRARY IEEE;
 
 USE IEEE.std_logic_1164.ALL;
 
-ENTITY p2_dc_6to64 IS
+ENTITY p2_dc_6to64_s IS
     PORT (
         a : IN std_logic_vector (5 DOWNTO 0);
         enabled : IN std_logic;
         q : OUT std_logic_vector (63 DOWNTO 0)
     );
-END p2_dc_6to64;
+END p2_dc_6to64_s;
 
-ARCHITECTURE p2_dc_6to64_behaviour OF p2_dc_6to64 IS
+ARCHITECTURE p2_dc_6to64_s_behaviour OF p2_dc_6to64_s IS
     signal qs : std_logic_vector (63 downto 0);
 BEGIN
     PROCESS (a, enabled)
@@ -93,5 +93,5 @@ BEGIN
         END IF;
     END PROCESS;
 
-    q <= qs;
-END p2_dc_6to64_behaviour;
+    q <= NOT qs;
+END p2_dc_6to64_s_behaviour;
