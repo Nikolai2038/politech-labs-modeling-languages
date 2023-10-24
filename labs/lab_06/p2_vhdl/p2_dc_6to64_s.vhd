@@ -11,6 +11,52 @@ ENTITY p2_dc_6to64_s IS
 END p2_dc_6to64_s;
 
 ARCHITECTURE p2_dc_6to64_s_behaviour OF p2_dc_6to64_s IS
+    -- Формальное описание используемого компонента
+    COMPONENT p1_dc_3to8_b_FOR_USE
+        PORT (
+            a : IN std_logic_vector (2 DOWNTO 0);
+            enabled : IN std_logic;
+            q : OUT std_logic_vector (7 DOWNTO 0)
+        );
+    END COMPONENT;
+
+    SIGNAL q_first_decoder : std_logic_vector (7 DOWNTO 0);
+BEGIN
+    decoder_1: p1_dc_3to8_b_FOR_USE PORT MAP (a(5 DOWNTO 3), enabled, q_first_decoder);
+
+    decoder_2: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(0), q(7 DOWNTO 0));
+    decoder_3: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(1), q(15 DOWNTO 8));
+    decoder_4: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(2), q(23 DOWNTO 16));
+    decoder_5: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(3), q(31 DOWNTO 24));
+    decoder_6: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(4), q(39 DOWNTO 32));
+    decoder_7: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(5), q(47 DOWNTO 40));
+    decoder_8: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(6), q(55 DOWNTO 48));
+    decoder_9: p1_dc_3to8_b_FOR_USE PORT MAP (a(2 DOWNTO 0), NOT q_first_decoder(6), q(63 DOWNTO 56));
+END p2_dc_6to64_s_behaviour;
+
+CONFIGURATION p2_dc_6to64_s_configuration OF p2_dc_6to64_s IS
+    FOR p2_dc_6to64_s_behaviour
+        FOR decoder_1, decoder_2, decoder_3, decoder_4, decoder_5, decoder_6, decoder_7, decoder_8, decoder_9: p1_dc_3to8_b_FOR_USE
+            -- Определяет интерфейс и модель компонента p1_dc_3to8_b_FOR_USE
+            -- work - текущая рабочая директория
+            USE ENTITY work.p1_dc_3to8_b (p1_dc_3to8_b_behaviour);
+        END FOR;
+    END FOR;
+END p2_dc_6to64_s_configuration;
+
+
+
+
+
+
+
+
+
+
+
+
+ARCHITECTURE p2_dc_6to64_s_behaviour OF p2_dc_6to64_s IS
+
     signal qs : std_logic_vector (63 downto 0);
 BEGIN
     PROCESS (a, enabled)
