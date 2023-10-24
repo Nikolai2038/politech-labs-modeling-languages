@@ -11,22 +11,26 @@ ENTITY p1_dc_3to8 IS
 END p1_dc_3to8;
 
 ARCHITECTURE p1_dc_3to8_behaviour OF p1_dc_3to8 IS
+    signal qs : std_logic_vector (7 downto 0);
 BEGIN
     PROCESS (a, enabled) BEGIN
         IF enabled = '0' THEN
-            q <= "00000000";
+            qs <= "11111111";
         ELSE
+            qs <= (others => '1');
             CASE a IS
-                WHEN "000" => q <= "00000001";
-                WHEN "001" => q <= "00000010";
-                WHEN "010" => q <= "00000100";
-                WHEN "011" => q <= "00001000";
-                WHEN "100" => q <= "00010000";
-                WHEN "101" => q <= "00100000";
-                WHEN "110" => q <= "01000000";
-                WHEN "111" => q <= "10000000";
-                WHEN OTHERS => q <= "00000000";
+                WHEN "000" => qs(0) <= '0';
+                WHEN "001" => qs(1) <= '0';
+                WHEN "010" => qs(2) <= '0';
+                WHEN "011" => qs(3) <= '0';
+                WHEN "100" => qs(4) <= '0';
+                WHEN "101" => qs(5) <= '0';
+                WHEN "110" => qs(6) <= '0';
+                WHEN "111" => qs(7) <= '0';
+                WHEN OTHERS => qs <= (others => '1');
             END CASE;
         END IF;
     END PROCESS;
+
+    q <= qs;
 END p1_dc_3to8_behaviour;
