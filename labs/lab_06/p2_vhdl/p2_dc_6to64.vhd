@@ -16,7 +16,7 @@ BEGIN
     PROCESS (a, enabled)
     BEGIN
         IF enabled = '0' THEN
-            qs <= (others => '1');
+            qs <= (others => '0');
         ELSE
             qs <= (others => '0');
             CASE a IS
@@ -88,11 +88,10 @@ BEGIN
                 WHEN "111110" => qs(62) <= '1';
                 WHEN "111111" => qs(63) <= '1';
 
-                WHEN OTHERS   => qs <= (others => '0');
+                WHEN OTHERS   => qs <= (others => '1');
             END CASE;
         END IF;
     END PROCESS;
 
-    -- Присваиваем именно в конце, так как std_logic_vector не может хранить 64 единицы - выдаёт ошибку "Unsupported feature error: Unsigned bit string literal >= 32 is not supported."
     q <= NOT qs;
 END p2_dc_6to64_behaviour;
