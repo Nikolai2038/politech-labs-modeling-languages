@@ -14,7 +14,7 @@
 
 
 # The default values for assignments are stored in the file
-#		p2_decoder_6-64_assignment_defaults.qdf
+#		p1_dc_3to8_assignment_defaults.qdf
 # If this file doesn't exist, and for assignments not listed, see file
 #		assignment_defaults.qdf
 
@@ -26,15 +26,14 @@
 # Project-Wide Assignments
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:51:39  OCTOBER 24, 2023"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:23:20  OCTOBER 24, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION 5.0
-set_global_assignment -name VHDL_FILE "p2_decoder_6-64.vhd"
 
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
 set_global_assignment -name FAMILY Stratix
-set_global_assignment -name TOP_LEVEL_ENTITY "p2_decoder_6-64"
+set_global_assignment -name TOP_LEVEL_ENTITY p1_dc_3to8
 
 # Fitter Assignments
 # ==================

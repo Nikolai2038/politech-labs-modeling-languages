@@ -15,9 +15,9 @@
 
 
 QUARTUS_VERSION = "5.0"
-DATE = "17:49:46  October 24, 2023"
+DATE = "19:23:20  October 24, 2023"
 
 
 # Revisions
 
-PROJECT_REVISION = "p1_decoder_3-8"
+PROJECT_REVISION = "p1_dc_3to8"
