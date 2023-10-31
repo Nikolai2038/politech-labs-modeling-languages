@@ -29,3 +29,19 @@
 
 - `labs\lab_06\p2_vhdl\p2_dc_6to64_b.vhd`
 - `labs\lab_06\p2_vhdl\p2_dc_6to64_b.scf`
+
+Неправильно понял 7-ую лабораторную и сделал шифраторы 32-5 и 64-6 (нужно было только 16-4):
+
+- `labs\lab_07\p1_schemas\p1_hpri_32to5.gdf`
+- `labs\lab_07\p1_schemas\p1_hpri_32to5.scf`
+- `labs\lab_07\p1_schemas\p1_hpri_32to5.sym`
+- `labs\lab_07\p1_schemas\p1_hpri_64to6.gdf`
+- `labs\lab_07\p1_schemas\p1_hpri_64to6.scf`
+- `labs\lab_07\p1_schemas\p1_hpri_64to6.sym`
+- `labs\lab_07\p1_schemas\p3_pointer_64to6to64.gdf`
+- `labs\lab_07\p1_schemas\p3_pointer_64to6to64.scf`
+
+Для этих лишних также использовал декодер, скопированный из 6-ой лабораторной:
+
+- `labs\lab_07\p1_schemas\p2_dc_6to64.gdf`
+- `labs\lab_07\p1_schemas\p2_dc_6to64.sym`
