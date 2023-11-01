@@ -5,7 +5,7 @@ USE IEEE.std_logic_1164.ALL;
 ENTITY p1_hpri_8to3_b IS
     PORT (
         q : IN std_logic_vector (7 DOWNTO 0);
-        ei : OUT std_logic;
+        ei : IN std_logic;
         g : OUT std_logic;
         eo : OUT std_logic;
         a : OUT std_logic_vector (2 DOWNTO 0)
@@ -13,30 +13,45 @@ ENTITY p1_hpri_8to3_b IS
 END p1_hpri_8to3_b;
 
 ARCHITECTURE p1_hpri_8to3_b_behaviour OF p1_hpri_8to3_b IS
-    signal as : std_logic_vector (7 downto 0);
-    signal gs : IN std_logic;
-    signal eis : IN std_logic;
+    signal as : std_logic_vector (2 downto 0);
+    signal gs : std_logic;
+    signal eos : std_logic;
 BEGIN
-    PROCESS (a, ei) BEGIN
+    PROCESS (q, ei) BEGIN
         IF ei = '0' THEN
             as <= "000";
+            gs <= '0';
+            eos <= '0';
         ELSE
-            as <= (others => '0');
-            CASE a IS
-                WHEN "000" => as(0) <= '0';
-                WHEN "001" => as(1) <= '0';
-                WHEN "010" => as(2) <= '0';
-                WHEN "011" => qs(3) <= '0';
-                WHEN "100" => qs(4) <= '0';
-                WHEN "101" => qs(5) <= '0';
-                WHEN "110" => qs(6) <= '0';
-                WHEN "111" => qs(7) <= '0';
-                WHEN OTHERS => qs <= (others => '1');
-            END CASE;
+            IF q = "0000000" THEN
+                gs <= '0';
+            ELSE
+                gs <= '1';
+            END IF;
+
+            eos <= NOT gs;
+
+            IF q(7) = '1' THEN
+                as <= "111";
+            ELSIF q(6) = '1' THEN
+                as <= "110";
+            ELSIF q(5) = '1' THEN
+                as <= "101";
+            ELSIF q(4) = '1' THEN
+                as <= "100";
+            ELSIF q(3) = '1' THEN
+                as <= "011";
+            ELSIF q(2) = '1' THEN
+                as <= "010";
+            ELSIF q(1) = '1' THEN
+                as <= "001";
+            ELSE
+                as <= "000";
+            END IF;
         END IF;
     END PROCESS;
 
     a <= as;
     g <= gs;
-    ei <= eis;
+    eo <= eos;
 END p1_hpri_8to3_b_behaviour;
