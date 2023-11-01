@@ -13,7 +13,7 @@ ENTITY p5_pointer_16to4to16_s IS
 END p5_pointer_16to4to16_s;
 
 ARCHITECTURE p5_pointer_16to4to16_s_behaviour OF p5_pointer_16to4to16_s IS
-    -- Ð¨Ð¸Ñ„Ñ€Ð°Ñ‚Ð¾Ñ€
+    -- Øèôðàòîð
     COMPONENT p1_hpri_16to4_s IS
         PORT (
             q : IN std_logic_vector (15 DOWNTO 0);
@@ -24,12 +24,12 @@ ARCHITECTURE p5_pointer_16to4to16_s_behaviour OF p5_pointer_16to4to16_s IS
         );
     END COMPONENT;
 
-    -- Ð”ÐµÑˆÐ¸Ñ„Ñ€Ð°Ñ‚Ð¾Ñ€
-    COMPONENT p2_dc_6to64_s IS
+    -- Äåøèôðàòîð
+    COMPONENT p5_dc_4to16 IS
         PORT (
-            a : IN std_logic_vector (5 DOWNTO 0);
+            a : IN std_logic_vector (3 DOWNTO 0);
             enabled : IN std_logic;
-            q : OUT std_logic_vector (63 DOWNTO 0)
+            q : OUT std_logic_vector (15 DOWNTO 0)
         );
     END COMPONENT;
 
@@ -38,7 +38,7 @@ ARCHITECTURE p5_pointer_16to4to16_s_behaviour OF p5_pointer_16to4to16_s IS
     SIGNAL eos : std_logic;
 BEGIN
     encoder: p1_hpri_16to4_s PORT MAP (r, ei, gs, eos, a);
-    decoder: p2_dc_6to64_s   PORT MAP (a, gs, q, gs, eos);
+    decoder: p5_dc_4to16   PORT MAP (a, gs, q);
 END p5_pointer_16to4to16_s_behaviour;
 
 CONFIGURATION p5_pointer_16to4to16_s_configuration OF p5_pointer_16to4to16_s IS
@@ -46,8 +46,8 @@ CONFIGURATION p5_pointer_16to4to16_s_configuration OF p5_pointer_16to4to16_s IS
         FOR encoder : p1_hpri_16to4_s
             USE ENTITY work.p1_hpri_16to4_s (p1_hpri_16to4_s_behaviour);
         END FOR;
-        FOR decoder : p2_dc_6to64_s
-            USE ENTITY work.p2_dc_6to64_s (p2_dc_6to64_s_behaviour);
+        FOR decoder : p5_dc_4to16
+            USE ENTITY work.p5_dc_4to16 (p5_dc_4to16_behaviour);
         END FOR;
     END FOR;
 END p5_pointer_16to4to16_s_configuration;
