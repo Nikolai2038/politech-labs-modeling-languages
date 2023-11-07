@@ -2,7 +2,7 @@ LIBRARY IEEE;
 
 USE IEEE.std_logic_1164.ALL;
 
-ENTITY p1_mux4_1_b IS
+ENTITY l08p02b_mux_4to1 IS
     PORT (
         x0 : IN std_logic;
         x1 : IN std_logic;
@@ -13,9 +13,9 @@ ENTITY p1_mux4_1_b IS
         enable : IN std_logic;
         output : OUT std_logic
     );
-END p1_mux4_1_b;
+END l08p02b_mux_4to1;
 
-ARCHITECTURE p1_mux4_1_b_behaviour OF p1_mux4_1_b IS
+ARCHITECTURE l08p02b_mux_4to1_behaviour OF l08p02b_mux_4to1 IS
     signal output_s : std_logic;
 BEGIN
     PROCESS (x0, x1, x2, x3) BEGIN
@@ -35,4 +35,4 @@ BEGIN
     END PROCESS;
 
     output <= output_s;
-END p1_mux4_1_b_behaviour;
+END l08p02b_mux_4to1_behaviour;

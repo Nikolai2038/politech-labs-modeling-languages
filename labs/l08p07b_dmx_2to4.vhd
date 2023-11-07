@@ -2,15 +2,15 @@ LIBRARY IEEE;
 
 USE IEEE.std_logic_1164.ALL;
 
-ENTITY p7_dmx_b IS
+ENTITY l08p07b_dmx_2to4 IS
     PORT (
         x : IN std_logic_vector (1 DOWNTO 0);
         e : IN std_logic;
         f : OUT std_logic_vector (3 DOWNTO 0)
     );
-END p7_dmx_b;
+END l08p07b_dmx_2to4;
 
-ARCHITECTURE p7_dmx_b_behaviour OF p7_dmx_b IS
+ARCHITECTURE l08p07b_dmx_2to4_behaviour OF l08p07b_dmx_2to4 IS
     signal fs : std_logic_vector (3 DOWNTO 0);
 BEGIN
     PROCESS (x) BEGIN
@@ -29,4 +29,4 @@ BEGIN
     END PROCESS;
 
     f <= fs;
-END p7_dmx_b_behaviour;
+END l08p07b_dmx_2to4_behaviour;
