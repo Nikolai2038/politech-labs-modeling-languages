@@ -22,13 +22,13 @@ BEGIN
         IF enable = '0' THEN
             output_s <= '0';
         ELSE
-            IF a0 = '0' AND a1 = '0' THEN
+            IF a1 = '0' AND a0 = '0' THEN
                 output_s <= x0;
-            ELSIF a0 = '0' AND a1 = '1' THEN
+            ELSIF a1 = '0' AND a0 = '1' THEN
                 output_s <= x1;
-            ELSIF a0 = '1' AND a1 = '0' THEN
+            ELSIF a1 = '1' AND a0 = '0' THEN
                 output_s <= x2;
-            ELSIF a0 = '1' AND a1 = '1' THEN
+            ELSIF a1 = '1' AND a0 = '1' THEN
                 output_s <= x3;
             END IF;
         END IF;
