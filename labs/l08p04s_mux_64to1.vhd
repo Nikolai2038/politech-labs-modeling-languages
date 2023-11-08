@@ -5,44 +5,60 @@ USE IEEE.std_logic_1164.ALL;
 ENTITY l08p04s_mux_64to1 IS
     PORT (
         x : IN std_logic_vector (63 DOWNTO 0);
-        a : IN std_logic_vector (7 DOWNTO 0);
+        a : IN std_logic_vector (5 DOWNTO 0);
         enable : IN std_logic;
         output : OUT std_logic
     );
 END l08p04s_mux_64to1;
 
 ARCHITECTURE l08p04s_mux_64to1_behaviour OF l08p04s_mux_64to1 IS
-    COMPONENT l08p02b_mux_4to1
+    COMPONENT l08p04s_mux_16to1
         PORT (
-            x : IN std_logic_vector (3 DOWNTO 0);
-            a : IN std_logic_vector (1 DOWNTO 0);
+            x : IN std_logic_vector (15 DOWNTO 0);
+            a : IN std_logic_vector (3 DOWNTO 0);
             enable : IN std_logic;
             output : OUT std_logic
         );
     END COMPONENT;
 
-    SIGNAL a_1 : std_logic_vector (2 DOWNTO 0);
-    SIGNAL a_2 : std_logic_vector (2 DOWNTO 0);
-    SIGNAL g_1: std_logic;
-    SIGNAL g_2: std_logic;
-    SIGNAL eo_1: std_logic;
-    SIGNAL eo_2: std_logic;
-BEGIN
-    mux_1: l08p02b_mux_4to1 PORT MAP (q(15 DOWNTO 8), ei, g_1, eo_1, a_1);
-    mux_2: l08p02b_mux_4to1 PORT MAP (q(7 DOWNTO 0), eo_1, g_2, eo_2, a_2);
+    COMPONENT l08p02b_mux_4to1
+        PORT (
+            x0 : IN std_logic;
+            x1 : IN std_logic;
+            x2 : IN std_logic;
+            x3: IN std_logic;
+            a0 : IN std_logic;
+            a1: IN std_logic;
+            enable : IN std_logic;
+            output : OUT std_logic
+        );
+    END COMPONENT;
 
-    a(2 DOWNTO 0) <= a_1 OR a_2;
-    a(3) <= ei AND NOT eo_1;
-    g <= g_1 OR g_2;
-    eo <= eo_1 AND eo_2;
+    SIGNAL mux_16to1_1_output : std_logic;
+    SIGNAL mux_16to1_2_output : std_logic;
+    SIGNAL mux_16to1_3_output : std_logic;
+    SIGNAL mux_16to1_4_output : std_logic;
+BEGIN
+    mux_16to1_1: l08p04s_mux_16to1 PORT MAP (x(15 DOWNTO 0), a(3 DOWNTO 0), enable, mux_16to1_1_output);
+    mux_16to1_2: l08p04s_mux_16to1 PORT MAP (x(31 DOWNTO 16), a(3 DOWNTO 0), enable, mux_16to1_2_output);
+    mux_16to1_3: l08p04s_mux_16to1 PORT MAP (x(47 DOWNTO 32), a(3 DOWNTO 0), enable, mux_16to1_3_output);
+    mux_16to1_4: l08p04s_mux_16to1 PORT MAP (x(63 DOWNTO 48), a(3 DOWNTO 0), enable, mux_16to1_4_output);
+
+    mux_4to1: l08p02b_mux_4to1 PORT MAP (mux_16to1_1_output, mux_16to1_2_output, mux_16to1_3_output, mux_16to1_4_output, a(4), a(5), enable, output);
 END l08p04s_mux_64to1_behaviour;
 
 CONFIGURATION l08p04s_mux_64to1_configuration OF l08p04s_mux_64to1 IS
     FOR l08p04s_mux_64to1_behaviour
         FOR
-            mux_1,
-            mux_2
-        : l08p02b_mux_4to1
+            mux_16to1_1,
+            mux_16to1_2,
+            mux_16to1_3,
+            mux_16to1_4
+        : l08p04s_mux_16to1
+            USE ENTITY work.l08p04s_mux_16to1 (l08p04s_mux_16to1_behaviour);
+        END FOR;
+
+        FOR mux_4to1: l08p02b_mux_4to1
             USE ENTITY work.l08p02b_mux_4to1 (l08p02b_mux_4to1_behaviour);
         END FOR;
     END FOR;
