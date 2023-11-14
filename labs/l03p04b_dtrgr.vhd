@@ -4,7 +4,7 @@ LIBRARY ieee;
 -- Использование библиотечного модуля, содержащего дополнительные типы переменных
 USE ieee.std_logic_1164.ALL;
 
-ENTITY p5_dtrgr_b IS
+ENTITY l03p04b_dtrgr IS
     -- Описание входов и выходов устройства
     PORT (
         d : IN std_logic;
@@ -12,9 +12,9 @@ ENTITY p5_dtrgr_b IS
         q : INOUT std_logic;
         qb : INOUT std_logic
     );
-END p5_dtrgr_b;
+END l03p04b_dtrgr;
 
-ARCHITECTURE p5_dtrgr_b_behaviour OF p5_dtrgr_b IS
+ARCHITECTURE l03p04b_dtrgr_behaviour OF l03p04b_dtrgr IS
     SIGNAL qs:std_logic;
 BEGIN
     PROCESS (d) BEGIN
@@ -25,4 +25,4 @@ BEGIN
 
     q <= qs;
     qb <= NOT qs;
-END p5_dtrgr_b_behaviour;
+END l03p04b_dtrgr_behaviour;

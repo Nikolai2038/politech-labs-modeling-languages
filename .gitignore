@@ -16,10 +16,19 @@
 # VHDL files
 !**/*.vhd
 
-# Symbol files
-!**/*.sym
-# VHDL automatically compiles symbols, so we ignore them to not have them changed every time
-**/*vhdl/*.sym
+# ========================================
+# Symbol files.
+# VHDL automatically compiles symbols, so we ignore them to not have them changed every time.
+# But we need some symbols for other symbols, so we keep them in GIT
+# ========================================
+# For l01p06g_sum
+!labs/l01p01g_polusum.sym
+# For l03p03g_dtrgr
+!labs/l03p01g_rstrgr.sym
+
+# Compiled VHDL files (we keep them it GIT to not manually recompile each dependency symbol when ignored files are deleted)
+!labs/LIB.DLS
+# ========================================
 
 # Quartus II 5.0 project files
 !**/*.qpf
