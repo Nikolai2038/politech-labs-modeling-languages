@@ -33,7 +33,6 @@
 !labs/l07p02g_hpri16to4.sym
 !labs/l07p05g_dc4to16.sym
 
-
 # Compiled VHDL files (we keep them it GIT to not manually recompile each dependency symbol when ignored files are deleted)
 !labs/*.DLS
 # ========================================
