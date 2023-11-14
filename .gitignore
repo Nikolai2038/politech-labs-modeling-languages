@@ -25,9 +25,17 @@
 !labs/l01p01g_polusum.sym
 # For l03p03g_dtrgr
 !labs/l03p01g_rstrgr.sym
+# For l06p02g_dc6to64
+!labs/l06p01g_dc3to8.sym
+# For l07p02g_hpri16to4
+!labs/l07p01g_hpri8to3.sym
+# For l07p05g_pointer16to4to16
+!labs/l07p02g_hpri16to4.sym
+!labs/l07p05g_dc4to16.sym
+
 
 # Compiled VHDL files (we keep them it GIT to not manually recompile each dependency symbol when ignored files are deleted)
-!labs/LIB.DLS
+!labs/*.DLS
 # ========================================
 
 # Quartus II 5.0 project files
