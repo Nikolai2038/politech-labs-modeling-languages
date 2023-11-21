@@ -34,7 +34,7 @@ BEGIN
     mux_2: l08p02b_mux4to1 PORT MAP (x(4), x(5), x(6), x(7), a(0), a(1), enable, mux_2_output);
     mux_3: l08p02b_mux4to1 PORT MAP (x(8), x(9), x(10), x(11), a(0), a(1), enable, mux_3_output);
     mux_4: l08p02b_mux4to1 PORT MAP (x(12), x(13), x(14), x(15), a(0), a(1), enable, mux_4_output);
-    mux_5: l08p02b_mux4to1 PORT MAP (mux_1_output, mux2_output, mux_3_output, mux_4_output, a(2), a(3), enable, output);
+    mux_5: l08p02b_mux4to1 PORT MAP (mux_1_output, mux_2_output, mux_3_output, mux_4_output, a(2), a(3), enable, output);
 END l08p04s_mux16to1_behaviour;
 
 CONFIGURATION l08p04s_mux16to1_configuration OF l08p04s_mux16to1 IS
