@@ -32,6 +32,8 @@
 # For l07p05g_pointer16to4to16
 !labs/l07p02g_hpri16to4.sym
 !labs/l07p05g_dc4to16.sym
+# For l09p03g_cmp4digits
+!labs/l09p01g_cmp2digits.sym
 
 # Compiled VHDL files (we keep them it GIT to not manually recompile each dependency symbol when ignored files are deleted)
 !labs/*.DLS
