@@ -32,6 +32,9 @@
 # For l07p05g_pointer16to4to16
 !labs/l07p02g_hpri16to4.sym
 !labs/l07p05g_dc4to16.sym
+# For l08p03g_mux64to1.gdf
+!labs/l08p02b_mux4to1.sym
+!labs/l08p03g_mux16to1.sym
 # For l09p03g_cmp4digits
 !labs/l09p01g_cmp2digits.sym
 
