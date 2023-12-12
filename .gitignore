@@ -39,6 +39,11 @@
 !labs/l08p03g_mux16to1.sym
 # For l09p03g_cmp4digits.gdf
 !labs/l09p01g_cmp2digits.sym
+# For l12p09g_msb4x4.gdf
+# For l12p09g_msb4x8.gdf
+!labs/l12p09g_msb4x2.sym
+# For l12p09g_msb4x8.gdf
+!labs/l12p09g_msb4x4.sym
 
 # Compiled VHDL files (we keep them it GIT to not manually recompile each dependency symbol when ignored files are deleted)
 !labs/*.DLS
