@@ -5,7 +5,7 @@ USE ieee.std_logic_1164.ALL;
 -- Для операции "+" с std_logic_vector
 use ieee.std_logic_unsigned.all;
 
-ENTITY p3_four_digit_counter_b IS
+ENTITY l05p07b_four_digit_counter IS
     PORT (
         jk : IN std_logic;
         c : IN std_logic;
@@ -15,9 +15,9 @@ ENTITY p3_four_digit_counter_b IS
         q2 : OUT std_logic;
         q3 : OUT std_logic
     );
-END p3_four_digit_counter_b;
+END l05p07b_four_digit_counter;
 
-ARCHITECTURE p3_four_digit_counter_b_behaviour OF p3_four_digit_counter_b IS
+ARCHITECTURE l05p07b_four_digit_counter_behaviour OF l05p07b_four_digit_counter IS
     signal qs: std_logic_vector(3 downto 0);
 BEGIN
     PROCESS (r, c) BEGIN
@@ -36,4 +36,4 @@ BEGIN
     q1 <= qs(1);
     q2 <= qs(2);
     q3 <= qs(3);
-END p3_four_digit_counter_b_behaviour;
+END l05p07b_four_digit_counter_behaviour;

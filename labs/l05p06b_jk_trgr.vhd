@@ -2,7 +2,7 @@ LIBRARY ieee;
 
 USE ieee.std_logic_1164.ALL;
 
-ENTITY p1_jk_trgr_b IS
+ENTITY l05p06b_jk_trgr IS
     PORT (
         j : IN std_logic;
         k : IN std_logic;
@@ -10,9 +10,9 @@ ENTITY p1_jk_trgr_b IS
         clock : IN std_logic;
         q : OUT std_logic
     );
-END p1_jk_trgr_b;
+END l05p06b_jk_trgr;
 
-ARCHITECTURE p1_jk_trgr_b_behaviour OF p1_jk_trgr_b IS
+ARCHITECTURE l05p06b_jk_trgr_behaviour OF l05p06b_jk_trgr IS
     SIGNAL qs:std_logic;
 BEGIN
     PROCESS (reset, j, k, clock) BEGIN
@@ -34,4 +34,4 @@ BEGIN
     END PROCESS;
 
     q <= qs;
-END p1_jk_trgr_b_behaviour;
+END l05p06b_jk_trgr_behaviour;

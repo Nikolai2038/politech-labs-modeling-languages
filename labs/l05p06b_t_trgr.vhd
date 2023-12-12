@@ -2,15 +2,15 @@ LIBRARY ieee;
 
 USE ieee.std_logic_1164.ALL;
 
-ENTITY p2_t_trgr_b IS
+ENTITY l05p06b_t_trgr IS
     PORT (
         t : IN std_logic;
         reset : IN std_logic;
         q : OUT std_logic
     );
-END p2_t_trgr_b;
+END l05p06b_t_trgr;
 
-ARCHITECTURE p2_t_trgr_b_behaviour OF p2_t_trgr_b IS
+ARCHITECTURE l05p06b_t_trgr_behaviour OF l05p06b_t_trgr IS
     SIGNAL qs:std_logic;
 BEGIN
     PROCESS (reset, t) BEGIN
@@ -26,4 +26,4 @@ BEGIN
     END PROCESS;
 
     q <= qs;
-END p2_t_trgr_b_behaviour;
+END l05p06b_t_trgr_behaviour;
