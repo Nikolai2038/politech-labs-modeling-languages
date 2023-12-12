@@ -1,16 +1,16 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY p2_shift_reg IS
+ENTITY l04p10q_shift_reg IS
     PORT (
         clk : IN STD_LOGIC;
         data : IN STD_LOGIC;
         reset : IN STD_LOGIC;
         q : OUT STD_LOGIC
     );
-END p2_shift_reg;
+END l04p10q_shift_reg;
 
-ARCHITECTURE p2_shift_reg_behaviour OF p2_shift_reg IS
+ARCHITECTURE l04p10q_shift_reg_behaviour OF l04p10q_shift_reg IS
 SIGNAL rs: STD_LOGIC_VECTOR (3 downto 0) ;
 BEGIN
     process (clk, reset) begin
@@ -22,4 +22,4 @@ BEGIN
     end process;
 
     q <= rs(0);
-END p2_shift_reg_behaviour;
+END l04p10q_shift_reg_behaviour;

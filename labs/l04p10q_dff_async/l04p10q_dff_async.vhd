@@ -1,14 +1,14 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity p1_dff_async is
+entity l04p10q_dff_async is
     port (
         data, clk, reset, preset : in std_logic;
         q : out std_logic
     );
-end p1_dff_async;
+end l04p10q_dff_async;
 
-architecture p1_dff_async_behaviour of p1_dff_async is
+architecture l04p10q_dff_async_behaviour of l04p10q_dff_async is
 begin
     process (clk, reset, preset) begin
         if (reset = '0') then
@@ -19,4 +19,4 @@ begin
             q <= data;
         end if;
     end process;
-end p1_dff_async_behaviour;
+end l04p10q_dff_async_behaviour;

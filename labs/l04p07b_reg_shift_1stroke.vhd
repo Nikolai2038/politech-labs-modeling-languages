@@ -4,7 +4,7 @@ LIBRARY ieee;
 -- Использование библиотечного модуля, содержащего дополнительные типы переменных
 USE ieee.std_logic_1164.ALL;
 
-ENTITY p1_reg_shift_1stroke_b IS
+ENTITY l04p07b_reg_shift_1stroke IS
     -- Описание входов и выходов устройства
     PORT (
         d : IN std_logic;
@@ -15,9 +15,9 @@ ENTITY p1_reg_shift_1stroke_b IS
         q3 : OUT std_logic;
         q4 : OUT std_logic
     );
-END p1_reg_shift_1stroke_b;
+END l04p07b_reg_shift_1stroke;
 
-ARCHITECTURE p1_reg_shift_1stroke_b_behaviour OF p1_reg_shift_1stroke_b IS
+ARCHITECTURE l04p07b_reg_shift_1stroke_behaviour OF l04p07b_reg_shift_1stroke IS
     SIGNAL qs1:std_logic;
     SIGNAL qs2:std_logic;
     SIGNAL qs3:std_logic;
@@ -44,4 +44,4 @@ BEGIN
     q2 <= qs2;
     q3 <= qs3;
     q4 <= qs4;
-END p1_reg_shift_1stroke_b_behaviour;
+END l04p07b_reg_shift_1stroke_behaviour;

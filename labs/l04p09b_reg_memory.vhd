@@ -4,7 +4,7 @@ LIBRARY ieee;
 -- Использование библиотечного модуля, содержащего дополнительные типы переменных
 USE ieee.std_logic_1164.ALL;
 
-ENTITY p4_reg_memory_b IS
+ENTITY l04p09b_reg_memory IS
     -- Описание входов и выходов устройства
     PORT (
         x1 : IN std_logic;
@@ -23,9 +23,9 @@ ENTITY p4_reg_memory_b IS
         q7 : OUT std_logic;
         q8 : OUT std_logic
     );
-END p4_reg_memory_b;
+END l04p09b_reg_memory;
 
-ARCHITECTURE p4_reg_memory_b_behaviour OF p4_reg_memory_b IS
+ARCHITECTURE l04p09b_reg_memory_behaviour OF l04p09b_reg_memory IS
     SIGNAL qs1:std_logic;
     SIGNAL qs2:std_logic;
     SIGNAL qs3:std_logic;
@@ -64,4 +64,4 @@ BEGIN
     q6 <= qs6;
     q7 <= qs7;
     q8 <= qs8;
-END p4_reg_memory_b_behaviour;
+END l04p09b_reg_memory_behaviour;

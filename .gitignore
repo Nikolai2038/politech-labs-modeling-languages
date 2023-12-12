@@ -21,21 +21,23 @@
 # VHDL automatically compiles symbols, so we ignore them to not have them changed every time.
 # But we need some symbols for other symbols, so we keep them in GIT
 # ========================================
-# For l01p06g_sum
+# For l01p06g_sum.gdf
 !labs/l01p01g_polusum.sym
-# For l03p03g_dtrgr
+# For l03p03g_dtrgr.gdf
 !labs/l03p01g_rstrgr.sym
-# For l06p02g_dc6to64
+# For l04p04g_reg_shift_2stroke.gdf
+!labs/l04p03g_dtrgr_2stroke.sym
+# For l06p02g_dc6to64.gdf
 !labs/l06p01g_dc3to8.sym
-# For l07p02g_hpri16to4
+# For l07p02g_hpri16to4.gdf
 !labs/l07p01g_hpri8to3.sym
-# For l07p05g_pointer16to4to16
+# For l07p05g_pointer16to4to16.gdf
 !labs/l07p02g_hpri16to4.sym
 !labs/l07p05g_dc4to16.sym
 # For l08p03g_mux64to1.gdf
 !labs/l08p02b_mux4to1.sym
 !labs/l08p03g_mux16to1.sym
-# For l09p03g_cmp4digits
+# For l09p03g_cmp4digits.gdf
 !labs/l09p01g_cmp2digits.sym
 
 # Compiled VHDL files (we keep them it GIT to not manually recompile each dependency symbol when ignored files are deleted)
