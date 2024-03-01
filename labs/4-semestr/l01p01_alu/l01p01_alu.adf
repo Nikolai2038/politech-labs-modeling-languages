@@ -1,8 +1,8 @@
 [Project]
 Current config=Generic
 VCS=0
-modified=13
+modified=3
 [Configurations]
 Generic=l01p01_alu
 [Files]
-/alu_32.vhd=4, 1 31091706 937076523, 0, , , ,
+/alu_32.vhd=4, 1 30919691 435350724, 0, , , ,

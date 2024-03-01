@@ -57,12 +57,8 @@
 # Shell scripts
 !**/*.sh
 
-# Active-VHDL project
-!**/Generic/contents.lib~
-!**/Generic/Generic.cfg
-!**/Generic/*.wsp
-!**/*.adf
-!**/*.LIB
+# Active-VHDL
+!**/4-semestr/**
 
-# Active-VHDL Waveform
-!**/*.awf
+# Log files
+**/*.log
