@@ -1,0 +1,11 @@
+[~A]
+last=17068
+modifyid=8
+valid=29032
+ver=52
+
+[~U]
+ALU_32=17068,5
+alu_32_types=15704,6
+dp32_types=0,6
+

@@ -56,3 +56,13 @@
 
 # Shell scripts
 !**/*.sh
+
+# Active-VHDL project
+!**/Generic/contents.lib~
+!**/Generic/Generic.cfg
+!**/Generic/*.wsp
+!**/*.adf
+!**/*.LIB
+
+# Active-VHDL Waveform
+!**/*.awf
