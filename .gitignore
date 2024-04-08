@@ -16,6 +16,9 @@
 # VHDL files
 !**/*.vhd
 
+# Bakup files files
+!**/*.bak
+
 # ========================================
 # Symbol files.
 # VHDL automatically compiles symbols, so we ignore them to not have them changed every time.
