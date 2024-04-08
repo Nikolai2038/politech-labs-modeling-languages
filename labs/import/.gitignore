@@ -1,5 +1,0 @@
-# Ignore all files except needed
-**/*.*
-
-# Gitignore files
-!**/.gitignore
