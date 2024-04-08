@@ -8,9 +8,6 @@ CmdLine=
 CmdLine=
 [OPENDOC|LASSIST.GENERIC||]
 CmdLine=
-[OPENDOC|PROJECT.KGENERICC|Z:\labs\4-semestr\l01p01_alu\l01p01_alu.adf|]
-CmdLine=
-Path=
 [OPENDOC|STIMMAN.STIMMANAGER||]
 CmdLine=
 [OPENDOC|VSIM.PROCESSVIEW||]
