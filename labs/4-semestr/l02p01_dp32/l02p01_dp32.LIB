@@ -1,17 +1,17 @@
 [~A]
-invalid=0
-last=66477
-modifyid=61
-valid=163645
+invalid=37419
+last=199911
+modifyid=68
+valid=163653
 ver=52
 
 [~U]
 ALU_32=27363,5
 alu_32_types=0,6
-clock_gen=61199,5
+clock_gen=185491,5
 dp32=66477,5
-dp32_behaviour_test=10498,7
-dp32_test=1364,5
+dp32_behaviour_test=199911,7
+dp32_test=190769,5
 dp32_types=11659,6
-memory=39353,5
+memory=163645,5
 

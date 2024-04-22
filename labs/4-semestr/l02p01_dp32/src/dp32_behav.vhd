@@ -2,7 +2,9 @@ USE work.dp32_types.all,work.alu_32_types.all;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 architecture behaviour of dp32 is
+	-- Array for registry memory
 	SUBTYPE reg_addr is natural range 0 to 255;
+	-- Every registry is 32-bit
 	TYPE reg_array is array (reg_addr) of bit_32;
 begin
 	process
@@ -12,10 +14,13 @@ begin
 		VARIABLE op: bit_8;
 		VARIABLE r3,r1,r2:reg_addr;
 		VARIABLE i8:integer;
+		
+		-- Bits for conditioning
 		ALIAS cm_i: std_logic is current_instr(19);
 		ALIAS cm_V: std_logic is current_instr(18);
 		ALIAS cm_N: std_logic is current_instr(17);
 		ALIAS cm_Z: std_logic is current_instr(16);
+		
 		VARIABLE cc_V,cc_N,cc_Z : std_logic:='0';
 		VARIABLE temp_V,temp_N,temp_Z : std_logic:='0';
 		VARIABLE displacement : bit_32:=X"00000000";		
@@ -24,7 +29,7 @@ begin
 								fetch_cycle	: in boolean;
 								result		:out bit_32) IS
 		begin
-			--start bus cycle with address output
+			-- Start bus cycle with address output
 			a_bus <=addr after Tpd;
 			fetch <= bool_to_bit(fetch_cycle)after Tpd;
 			wait until phi1 ='1';
@@ -188,7 +193,9 @@ begin
 		write 	<='0' after Tpd;
 		fetch 	<='0' after Tpd;
 		d_bus 	<= null after Tpd;
+		-- Reset command pointer to the first command
 		PC:= X"0000_0000";
+		-- Wait until "reset" will be '0' (48 ns)
 		wait until reset = '0';
 	end if;
 	--

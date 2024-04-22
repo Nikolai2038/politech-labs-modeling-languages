@@ -1,13 +1,13 @@
 [Project]
 Current config=Generic
 VCS=0
-modified=16
+modified=19
 [Configurations]
 Generic=l02p01_dp32
 [Files]
-/dp32_test.vhd=4, 1 31099340 1686398189, 0, , , ,
+/dp32_test.vhd=4, 1 31102083 3494729185, 0, , , ,
 /alu_32.vhd=4, 1 31099340 1686567611, 0, , , ,
-/memory.vhd=4, 1 30919673 1404842938, 0, , , ,
-/clk_gen.vhd=4, 1 30919672 1910308893, 0, , , ,
+/memory.vhd=4, 1 31102083 3494508298, 0, , , ,
+/clk_gen.vhd=4, 1 31102083 3494573429, 0, , , ,
 /dp32_behav.vhd=4, 1 31099340 1686738992, 0, , , ,
 /dp32_rtl.vhd=4, 2 30919691 1437067662, 0, , , ,

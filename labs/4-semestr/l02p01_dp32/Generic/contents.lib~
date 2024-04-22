@@ -1,4 +1,4 @@
-61
+68
 ~E
 ALU_32
 z:\labs\4-semestr\l02p01_dp32\src\alu_32.vhd
@@ -14,7 +14,7 @@ z:\labs\4-semestr\l02p01_dp32\src\clk_gen.vhd
 ~A
 behaviour
 z:\labs\4-semestr\l02p01_dp32\src\clk_gen.vhd
-10
+11
 ~E
 dp32
 z:\labs\4-semestr\l02p01_dp32\src\dp32_rtl.vhd
@@ -30,7 +30,7 @@ z:\labs\4-semestr\l02p01_dp32\src\dp32_behav.vhd
 ~C
 dp32_behaviour_test
 z:\labs\4-semestr\l02p01_dp32\src\dp32_test.vhd
-47
+64
 ~E
 dp32_test
 z:\labs\4-semestr\l02p01_dp32\src\dp32_test.vhd
@@ -38,7 +38,7 @@ z:\labs\4-semestr\l02p01_dp32\src\dp32_test.vhd
 ~A
 structure
 z:\labs\4-semestr\l02p01_dp32\src\dp32_test.vhd
-6
+12
 ~E
 memory
 z:\labs\4-semestr\l02p01_dp32\src\memory.vhd

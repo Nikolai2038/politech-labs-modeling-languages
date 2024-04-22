@@ -1,13 +1,22 @@
+-- Include libraries with types
 USE work.dp32_types.all, work.alu_32_types.all;
+
+-- Include library with logic operations
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+
+-- Use DP32 as black box - testing scheme does not have inputs or outputs
 entity dp32_test is
 end dp32_test;
+
 architecture structure of dp32_test is
+	-- Clock generator
 	COMPONENT clock_gen
 		port(phi1,phi2:out std_logic; 
 				reset :out std_logic);	
 	END COMPONENT;
+	
+	-- DP32
 	COMPONENT dp32
 		port(	d_bus		:inout bus_bit_32 bus;
 				a_bus		:out bit_32;
@@ -17,12 +26,16 @@ architecture structure of dp32_test is
 				phi1,phi2	:in std_logic; 
 				reset 		:in std_logic);	
 	END COMPONENT;
+
+	-- Memory component
 	COMPONENT memory
 		port(	d_bus		:inout bus_bit_32 bus;
 				a_bus		:in bit_32;
 				read,write	:in std_logic; 
 				ready		:out std_logic);	
 	END COMPONENT;
+	
+	-- To connect three components
 	SIGNAL 	d_bus		: bus_bit_32 bus;
 	SIGNAL 	a_bus		: bit_32;
 	SIGNAL 	read,write	: std_logic; 
@@ -32,6 +45,8 @@ architecture structure of dp32_test is
 	SIGNAL	reset 		: std_logic;		
 
 begin
+	-- How components are connected.
+	-- There is no "process" command, so all three components starts to work at the same time (parallel).
 	cg	: 	clock_gen
 			port map (phi1 =>phi1,phi2 =>phi2,reset =>reset);
 	proc:	dp32
@@ -44,10 +59,13 @@ begin
 						read =>read,write =>write,ready =>ready);	
 					
 end structure;
+
+-- Behaviour configuration (but the above is the same for behaviour and structural configurations)
 Configuration dp32_behaviour_test of dp32_test is
 	for structure
 		for cg	:clock_gen
 			use entity work.clock_gen(behaviour)
+				-- Set the delays
 				generic map (Tpw => 8 ns,Tps => 2 ns);
 		end for;
 		for mem	:memory
