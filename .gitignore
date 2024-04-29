@@ -59,6 +59,13 @@
 
 # Active-VHDL
 !**/4-semestr/**
+# Compiled info
+**/*.lib
+**/Generic/contents.lib~
+# Compiled library file
+**/*.mgf
+# Log file
+**/*.erf
 
 # Backup files
 **/*.bak

@@ -1,7 +1,7 @@
 [Files List]
 c:\program files\aldec\active vhdl\vlib\std\src\standard.vhd=S
-z:\labs\4-semestr\l02p01b_dp32\src\alu_32.vhd=S
 c:\program files\aldec\active vhdl\vlib\ieee\src\stdlogic.vhd=S
+z:\labs\4-semestr\l02p01b_dp32\src\alu_32.vhd=S
 z:\labs\4-semestr\l02p01b_dp32\src\memory.vhd=S
 z:\labs\4-semestr\l02p01b_dp32\src\dp32_rtl.vhd=S
 z:\labs\4-semestr\l02p01b_dp32\src\dp32_behav.vhd=S
