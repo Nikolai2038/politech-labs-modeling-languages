@@ -1,12 +1,12 @@
 [Project]
 Current config=Generic
 VCS=0
-modified=70
+modified=89
 [Configurations]
 Generic=l02p01b_dp32
 [Files]
 /alu_32.vhd=4, 1 31103564 1890541159, 0, , , ,
 /clk_gen.vhd=4, 1 31103564 1890728654, 0, , , ,
-/memory.vhd=4, 1 31103564 1890856363, 0, , , ,
+/memory.vhd=4, 1 31103580 109215186, 0, , , ,
 /dp32_test.vhd=4, 1 31103564 1890995542, 0, , , ,
 /dp32_behav.vhd=4, 1 31103564 1891165607, 0, , , ,
