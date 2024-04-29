@@ -62,6 +62,8 @@
 # Compiled info
 **/*.lib
 **/Generic/contents.lib~
+# Simulation info
+**/Generic/wave.dat
 # Compiled library file
 **/*.mgf
 # Log file
