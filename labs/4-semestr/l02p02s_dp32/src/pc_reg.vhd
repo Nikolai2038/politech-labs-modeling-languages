@@ -2,12 +2,14 @@ USE work.dp32_types.all,work.alu_32_types.all;
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 entity PC_reg is
-    generic (Tpd    : Time:= unit_delay);
-    port (d        :in bit_32;
-          q        :out bus_bit_32 bus;
-          latch_en    :in std_logic;
-          out_en    :in std_logic;
-          reset        :in std_logic);
+    generic (Tpd : Time:= unit_delay);
+    port (
+        d        : in bit_32;
+        q        : out bus_bit_32 bus;
+        latch_en : in std_logic;
+        out_en   : in std_logic;
+        reset    : in std_logic
+    );
 end PC_reg;
 architecture behaviour of PC_reg is
 begin
@@ -22,6 +24,7 @@ begin
         else
             slave_PC:=master_PC;
         end if;
+
         if out_en='1' then
             q <= slave_PC after Tpd;
         else
