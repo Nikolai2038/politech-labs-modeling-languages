@@ -1,0 +1,13 @@
+[libraries]
+
+l01p01b_alu.files = [
+    "labs\\4-semestr\\l01p01b_alu\\src\\*.vhd",
+]
+
+l02p01b_dp32.files = [
+    "labs\\4-semestr\\l02p01b_dp32\\src\\*.vhd",
+]
+
+l02p02s_dp32.files = [
+    "labs\\4-semestr\\l02p02s_dp32\\src\\*.vhd",
+]

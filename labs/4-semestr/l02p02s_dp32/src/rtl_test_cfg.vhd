@@ -1,9 +1,10 @@
 use work.dp32_types.all;
+
 configuration dp32_rtl_test of dp32_test is
     for structure
         for cg : clock_gen
             use entity work.clock_gen(behaviour)
-                generic map (Tpw => 8 ns, Tps => 2 ns);
+            generic map(Tpw => 8 ns, Tps => 2 ns);
         end for;
         for mem : memory
             use entity work.memory(behaviour);
