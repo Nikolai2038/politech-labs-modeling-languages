@@ -3,7 +3,7 @@ Current config=Generic
 VCS=0
 modified=54
 [Configurations]
-Generic=l02p01_dp32
+Generic=l02p01b_dp32
 [Files]
 /dp32_test.vhd=4, 1 31102083 3494729185, 0, , , ,
 /alu_32.vhd=4, 1 31099340 1686567611, 0, , , ,

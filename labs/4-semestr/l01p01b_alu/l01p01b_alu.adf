@@ -3,7 +3,7 @@ Current config=Generic
 VCS=0
 modified=29
 [Configurations]
-Generic=l01p01_alu
+Generic=l01p01s_alu
 [Files]
 /alu_32.vhd=4, 1 30919691 435350724, 0, , , ,
 TestBench/ALU_32_TB.vhd=6, 1 31091713 1712244199, 0, 1 , , ,
