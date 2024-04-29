@@ -1,0 +1,17 @@
+[Files List]
+c:\program files\aldec\active vhdl\vlib\std\src\standard.vhd=S
+c:\program files\aldec\active vhdl\vlib\ieee\src\stdlogic.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\alu_32.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\ltch_buf.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\buffer32.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\pc_reg.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\mux2.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\reg_file.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\memory.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\clk_gen.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\dp32_test.vhd=S
+z:\labs\4-semestr\l02p02s_dp32\src\rtl_test_cfg.vhd=S

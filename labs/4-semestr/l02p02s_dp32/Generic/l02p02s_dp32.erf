@@ -1,0 +1,390 @@
+MESSAGE "File: .\src\latch.vhd" 
+MESSAGE "Compile Entity "latch"" 
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd" 1 9
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd" 1 29
+ERROR COMP96_0078: "Unknown identifier "unit_delay"." "Z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd" 6 16
+ERROR COMP96_0133: "Cannot find object declaration." "Z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd" 6 16
+ERROR COMP96_0104: "Undefined type of expression." "Z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd" 6 16
+MESSAGE "Compile Architecture "behaviour" of Entity "latch"" 
+ERROR COMP96_0056: "Cannot find referenced entity declaration "latch"." "Z:\labs\4-semestr\l02p02s_dp32\src\latch.vhd" 11 1
+MESSAGE "File: .\src\cc_comp.vhd" 
+MESSAGE "Compile Entity "cond_code_comparator"" 
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 1 9
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 1 29
+ERROR COMP96_0078: "Unknown identifier "unit_delay"." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 5 24
+ERROR COMP96_0133: "Cannot find object declaration." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 5 24
+ERROR COMP96_0104: "Undefined type of expression." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 5 24
+ERROR COMP96_0078: "Unknown identifier "CC_bits"." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 6 15
+ERROR COMP96_0064: "Unknown type." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 6 15
+ERROR COMP96_0078: "Unknown identifier "cm_bits"." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 7 12
+ERROR COMP96_0064: "Unknown type." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 7 12
+MESSAGE "Compile Architecture "behaviour" of Entity "cond_code_comparator"" 
+ERROR COMP96_0056: "Cannot find referenced entity declaration "cond_code_comparator"." "Z:\labs\4-semestr\l02p02s_dp32\src\cc_comp.vhd" 10 1
+MESSAGE "File: .\src\signext.vhd" 
+MESSAGE "Compile Entity "signext_8_32"" 
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 1 9
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 1 29
+ERROR COMP96_0078: "Unknown identifier "unit_delay"." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 5 24
+ERROR COMP96_0133: "Cannot find object declaration." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 5 24
+ERROR COMP96_0104: "Undefined type of expression." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 5 24
+ERROR COMP96_0078: "Unknown identifier "bit_8"." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 6 15
+ERROR COMP96_0064: "Unknown type." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 6 15
+ERROR COMP96_0078: "Unknown identifier "bus_bit_32"." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 7 15
+ERROR COMP96_0064: "Unknown type." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 7 15
+MESSAGE "Compile Architecture "behaviour" of Entity "signext_8_32"" 
+ERROR COMP96_0056: "Cannot find referenced entity declaration "signext_8_32"." "Z:\labs\4-semestr\l02p02s_dp32\src\signext.vhd" 10 1
+MESSAGE "File: .\src\dp32_test.vhd" 
+MESSAGE "Compile Entity "dp32_test"" 
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_test.vhd" 1 9
+ERROR COMP96_0055: "Cannot find referenced context element." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_test.vhd" 1 30
+MESSAGE "Compile Architecture "structure" of Entity "dp32_test"" 
+ERROR COMP96_0056: "Cannot find referenced entity declaration "dp32_test"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_test.vhd" 6 1
+MESSAGE "Compile Configuration "dp32_behaviour_test"" 
+ERROR COMP96_0208: "For a configuration of a given design entity, both the configuration declaration and the corresponding entity declaration must reside in the same library." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_test.vhd" 47 1
+MESSAGE "File: .\src\alu_32.vhd" 
+BEGINPROGRESS Z:\labs\4-semestr\l02p02s_dp32\src\alu_32.vhd
+UPDATEPROGRESS 1
+UPDATEPROGRESS 3
+MESSAGE "Compile Package "dp32_types"" 
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 10
+UPDATEPROGRESS 11
+UPDATEPROGRESS 12
+UPDATEPROGRESS 13
+UPDATEPROGRESS 14
+UPDATEPROGRESS 17
+UPDATEPROGRESS 18
+UPDATEPROGRESS 20
+MESSAGE "Compile Package Body "dp32_types"" 
+UPDATEPROGRESS 21
+UPDATEPROGRESS 22
+UPDATEPROGRESS 23
+UPDATEPROGRESS 24
+UPDATEPROGRESS 25
+UPDATEPROGRESS 26
+UPDATEPROGRESS 27
+UPDATEPROGRESS 28
+UPDATEPROGRESS 29
+UPDATEPROGRESS 39
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 42
+UPDATEPROGRESS 43
+UPDATEPROGRESS 44
+UPDATEPROGRESS 45
+UPDATEPROGRESS 46
+UPDATEPROGRESS 47
+UPDATEPROGRESS 48
+UPDATEPROGRESS 49
+UPDATEPROGRESS 50
+UPDATEPROGRESS 51
+UPDATEPROGRESS 55
+MESSAGE "Compile Package "alu_32_types"" 
+UPDATEPROGRESS 56
+UPDATEPROGRESS 57
+UPDATEPROGRESS 58
+UPDATEPROGRESS 59
+MESSAGE "Compile Entity "ALU_32"" 
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 63
+MESSAGE "Compile Architecture "behaviour" of Entity "ALU_32"" 
+UPDATEPROGRESS 64
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 67
+UPDATEPROGRESS 68
+UPDATEPROGRESS 69
+UPDATEPROGRESS 70
+UPDATEPROGRESS 71
+UPDATEPROGRESS 72
+UPDATEPROGRESS 73
+UPDATEPROGRESS 74
+UPDATEPROGRESS 75
+UPDATEPROGRESS 76
+UPDATEPROGRESS 77
+UPDATEPROGRESS 78
+UPDATEPROGRESS 79
+UPDATEPROGRESS 80
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 100
+ENDPROGRESS Z:\labs\4-semestr\l02p02s_dp32\src\alu_32.vhd
+MESSAGE "File: .\src\mux2.vhd" 
+MESSAGE "Compile Entity "mux2"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "mux2"" 
+MESSAGE "File: .\src\buffer32.vhd" 
+MESSAGE "Compile Entity "buffer_32"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "buffer_32"" 
+MESSAGE "File: .\src\reg_file.vhd" 
+MESSAGE "Compile Entity "reg_file_32_rrw"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "reg_file_32_rrw"" 
+MESSAGE "File: .\src\memory.vhd" 
+MESSAGE "Compile Entity "memory"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "memory"" 
+MESSAGE "File: .\src\rtl_test_cfg.vhd" 
+MESSAGE "Compile Configuration "dp32_rtl_test"" 
+ERROR COMP96_0208: "For a configuration of a given design entity, both the configuration declaration and the corresponding entity declaration must reside in the same library." "Z:\labs\4-semestr\l02p02s_dp32\src\rtl_test_cfg.vhd" 2 1
+MESSAGE "File: .\src\ltch_buf.vhd" 
+MESSAGE "Compile Entity "latch_buffer_32"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "latch_buffer_32"" 
+MESSAGE "File: .\src\dp32_rtl.vhd" 
+BEGINPROGRESS Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd
+MESSAGE "Compile Entity "dp32"" 
+UPDATEPROGRESS 1
+UPDATEPROGRESS 2
+MESSAGE "Compile Architecture "RTL" of Entity "dp32"" 
+UPDATEPROGRESS 3
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 10
+UPDATEPROGRESS 11
+UPDATEPROGRESS 12
+UPDATEPROGRESS 13
+UPDATEPROGRESS 14
+UPDATEPROGRESS 15
+UPDATEPROGRESS 16
+UPDATEPROGRESS 17
+UPDATEPROGRESS 18
+UPDATEPROGRESS 19
+UPDATEPROGRESS 20
+UPDATEPROGRESS 21
+UPDATEPROGRESS 22
+UPDATEPROGRESS 23
+UPDATEPROGRESS 24
+UPDATEPROGRESS 25
+UPDATEPROGRESS 26
+UPDATEPROGRESS 27
+UPDATEPROGRESS 28
+UPDATEPROGRESS 29
+UPDATEPROGRESS 30
+UPDATEPROGRESS 31
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
+UPDATEPROGRESS 34
+UPDATEPROGRESS 35
+UPDATEPROGRESS 36
+UPDATEPROGRESS 37
+UPDATEPROGRESS 38
+UPDATEPROGRESS 39
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 42
+UPDATEPROGRESS 43
+UPDATEPROGRESS 44
+UPDATEPROGRESS 45
+UPDATEPROGRESS 46
+UPDATEPROGRESS 47
+UPDATEPROGRESS 48
+UPDATEPROGRESS 49
+UPDATEPROGRESS 50
+UPDATEPROGRESS 51
+UPDATEPROGRESS 52
+UPDATEPROGRESS 53
+UPDATEPROGRESS 54
+UPDATEPROGRESS 55
+UPDATEPROGRESS 56
+UPDATEPROGRESS 57
+UPDATEPROGRESS 58
+UPDATEPROGRESS 59
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 62
+UPDATEPROGRESS 63
+UPDATEPROGRESS 64
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 67
+UPDATEPROGRESS 68
+UPDATEPROGRESS 69
+UPDATEPROGRESS 70
+UPDATEPROGRESS 71
+UPDATEPROGRESS 72
+UPDATEPROGRESS 73
+UPDATEPROGRESS 74
+UPDATEPROGRESS 75
+UPDATEPROGRESS 76
+UPDATEPROGRESS 77
+UPDATEPROGRESS 78
+UPDATEPROGRESS 79
+UPDATEPROGRESS 80
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 94
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 97
+UPDATEPROGRESS 98
+UPDATEPROGRESS 100
+WARNING COMP96_0140: "There is no default binding for component "latch"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 118 1
+WARNING COMP96_0140: "There is no default binding for component "PC_reg"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 121 1
+WARNING COMP96_0140: "There is no default binding for component "latch"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 129 1
+WARNING COMP96_0140: "There is no default binding for component "cond_code_comparator"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 132 1
+WARNING COMP96_0140: "There is no default binding for component "latch"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 143 1
+WARNING COMP96_0140: "There is no default binding for component "latch"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 147 1
+WARNING COMP96_0140: "There is no default binding for component "signext_8_32"." "Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd" 151 1
+ENDPROGRESS Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd
+MESSAGE "File: .\src\pc_reg.vhd" 
+MESSAGE "Compile Entity "PC_reg"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "PC_reg"" 
+MESSAGE "File: .\src\clk_gen.vhd" 
+MESSAGE "Compile Entity "clock_gen"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "clock_gen"" 
+MESSAGE "Improper file order detected for referenced units" 
+MESSAGE "Automatic file reorder and recompilation required." 
+MESSAGE "File reorder and recompilation in progress" 
+MESSAGE "File: .\src\signext.vhd" 
+MESSAGE "Compile Entity "signext_8_32"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "signext_8_32"" 
+MESSAGE "File: .\src\cc_comp.vhd" 
+MESSAGE "Compile Entity "cond_code_comparator"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "cond_code_comparator"" 
+MESSAGE "File: .\src\dp32_test.vhd" 
+MESSAGE "Compile Entity "dp32_test"" 
+MESSAGE "Compile Architecture "structure" of Entity "dp32_test"" 
+MESSAGE "Compile Configuration "dp32_behaviour_test"" 
+MESSAGE "File: .\src\latch.vhd" 
+MESSAGE "Compile Entity "latch"" 
+MESSAGE "Compile Architecture "behaviour" of Entity "latch"" 
+MESSAGE "File: .\src\dp32_rtl.vhd" 
+BEGINPROGRESS Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd
+MESSAGE "Compile Entity "dp32"" 
+UPDATEPROGRESS 1
+UPDATEPROGRESS 2
+MESSAGE "Entity "dp32" has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "RTL" of Entity "dp32"" 
+UPDATEPROGRESS 3
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 10
+UPDATEPROGRESS 11
+UPDATEPROGRESS 12
+UPDATEPROGRESS 13
+UPDATEPROGRESS 14
+UPDATEPROGRESS 15
+UPDATEPROGRESS 16
+UPDATEPROGRESS 17
+UPDATEPROGRESS 18
+UPDATEPROGRESS 19
+UPDATEPROGRESS 20
+UPDATEPROGRESS 21
+UPDATEPROGRESS 22
+UPDATEPROGRESS 23
+UPDATEPROGRESS 24
+UPDATEPROGRESS 25
+UPDATEPROGRESS 26
+UPDATEPROGRESS 27
+UPDATEPROGRESS 28
+UPDATEPROGRESS 29
+UPDATEPROGRESS 30
+UPDATEPROGRESS 31
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
+UPDATEPROGRESS 34
+UPDATEPROGRESS 35
+UPDATEPROGRESS 36
+UPDATEPROGRESS 37
+UPDATEPROGRESS 38
+UPDATEPROGRESS 39
+UPDATEPROGRESS 40
+UPDATEPROGRESS 41
+UPDATEPROGRESS 42
+UPDATEPROGRESS 43
+UPDATEPROGRESS 44
+UPDATEPROGRESS 45
+UPDATEPROGRESS 46
+UPDATEPROGRESS 47
+UPDATEPROGRESS 48
+UPDATEPROGRESS 49
+UPDATEPROGRESS 50
+UPDATEPROGRESS 51
+UPDATEPROGRESS 52
+UPDATEPROGRESS 53
+UPDATEPROGRESS 54
+UPDATEPROGRESS 55
+UPDATEPROGRESS 56
+UPDATEPROGRESS 57
+UPDATEPROGRESS 58
+UPDATEPROGRESS 59
+UPDATEPROGRESS 60
+UPDATEPROGRESS 61
+UPDATEPROGRESS 62
+UPDATEPROGRESS 63
+UPDATEPROGRESS 64
+UPDATEPROGRESS 65
+UPDATEPROGRESS 66
+UPDATEPROGRESS 67
+UPDATEPROGRESS 68
+UPDATEPROGRESS 69
+UPDATEPROGRESS 70
+UPDATEPROGRESS 71
+UPDATEPROGRESS 72
+UPDATEPROGRESS 73
+UPDATEPROGRESS 74
+UPDATEPROGRESS 75
+UPDATEPROGRESS 76
+UPDATEPROGRESS 77
+UPDATEPROGRESS 78
+UPDATEPROGRESS 79
+UPDATEPROGRESS 80
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 84
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 89
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 94
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 97
+UPDATEPROGRESS 98
+UPDATEPROGRESS 100
+ENDPROGRESS Z:\labs\4-semestr\l02p02s_dp32\src\dp32_rtl.vhd
+MESSAGE "File: .\src\rtl_test_cfg.vhd" 
+MESSAGE "Compile Configuration "dp32_rtl_test"" 
+MESSAGE "Top-Level unit detected" 
+MESSAGE "Configuration  =>   dp32_rtl_test" 
+MESSAGE "Configuration  =>   dp32_behaviour_test" 
+MESSAGE "Compile success 0 Errors 0 Warnings  Analysis time :  6.0 [s]" 
