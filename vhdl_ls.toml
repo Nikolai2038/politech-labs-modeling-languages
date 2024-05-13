@@ -2,6 +2,7 @@
 
 l01p01b_alu.files = [
     "labs\\4-semestr\\l01p01b_alu\\src\\*.vhd",
+    "labs\\4-semestr\\l01p01b_alu\\src\\*\\*.vhd",
 ]
 
 l02p01b_dp32.files = [
