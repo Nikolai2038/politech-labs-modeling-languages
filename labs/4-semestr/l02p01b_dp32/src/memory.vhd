@@ -97,24 +97,24 @@ begin
             -- ========================================
             -- [CHECKPOINT] 90ns
             --     reset 0
-            0 => X"1000_0000", -- add quick            -- r0 <- r0 + 0
+            0 => X"1000_0000", -- add quick             -- r0 <- r0 + 0
             --     size = array.size
-            1 => X"1001_0008", -- add quick            -- r1 <- r0 + 8
+            1 => X"1001_0008", -- add quick             -- r1 <- r0 + 8
             --     id = size - 1
-            2 => X"1102_0101", -- subtract quick       -- r2 <- r1 - 1
+            2 => X"1102_0101", -- subtract quick        -- r2 <- r1 - 1
             -- CYCLE_FROM_LAST_THROUGH_ALL:
             --         id_max = id
-            3 => X"1003_0200", -- add quick            -- r3 <- r2 + 0
+            3 => X"1003_0200", -- add quick             -- r3 <- r2 + 0
             --         id_inner = 0
-            4 => X"1004_0000", -- add quick            -- r4 <- r0 + 0
+            4 => X"1004_0000", -- add quick             -- r4 <- r0 + 0
             --     CYCLE_FIND_MAX_BEFORE:
             --         IF_1 (array[id_inner] > array[id_max]) THEN goto THEN_1
-            5 => X"3005_0464", -- load quick           -- r5 <- M[r4 + 100]
-            6 => X"3006_0364", -- load quick           -- r6 <- M[r3 + 100]
-            7 => X"0107_0506", -- subtract             -- r7 <- r5 - r6
-            8 => X"5107_000B", -- branch indexed quick -- IF: ivnz == 0111 THEN: PC <- r0 + 11
+            5 => X"3005_0464", -- load quick            -- r5 <- M[r4 + 100]
+            6 => X"3006_0364", -- load quick            -- r6 <- M[r3 + 100]
+            7 => X"0107_0506", -- subtract              -- r7 <- r5 - r6
+            8 => X"5107_000B", -- branch indexed quick  -- IF: ivnz == 0111 THEN: PC <- r0 + 11
             --         goto ENDIF_1
-            9 => X"1000_0000", -- add quick            -- r0 <- r0 + 0
+            9 => X"1000_0000", -- add quick             -- r0 <- r0 + 0
             10 => X"5109_000C", -- branch indexed quick -- IF: ivnz == 1001 THEN: PC <- r0 + 12
             --         THEN_1:
             --             id_max = id_inner
@@ -148,7 +148,7 @@ begin
             26 => X"5109_0022", -- branch indexed quick -- IF: ivnz == 1001 THEN: PC <- r0 + 34
             --     ENDIF_3:
             --     id--
-            27 => X"1102_0201", -- subtract quick            -- r2 <- r2 - 1
+            27 => X"1102_0201", -- subtract quick       -- r2 <- r2 - 1
             -- IF_5 (id >= 0) THEN goto CYCLE_FROM_LAST_THROUGH_ALL
             28 => X"1107_0200", -- subtract quick       -- r7 <- r2 - 0
             29 => X"5106_0003", -- branch indexed quick -- IF: ivnz == 0110 THEN: PC <- r0 + 2
@@ -167,7 +167,7 @@ begin
             --         temp_2 = array[id_inner]
             36 => X"300B_0464", -- load quick           -- r11 <- M[r4 + 100]
             --         array[id_inner] = temp_1
-            37 => X"310A_0464", -- store quick           -- M[r4 + 100] <- r10
+            37 => X"310A_0464", -- store quick          -- M[r4 + 100] <- r10
             --         array[_id] = temp_2
             38 => X"310B_0864", -- load quick           -- M[r8 + 100] <- r11
             --         id_inner++
@@ -180,8 +180,8 @@ begin
             --     goto return_to
             43 => X"1000_0000", -- add quick            -- r0 <- r0 + 0
             44 => X"5109_0900", -- branch indexed quick -- IF: ivnz == 1001 THEN: PC <- r9 + 0
-            --
-            -- array:
+
+            -- array
             100 => X"0000_0004",
             101 => X"0000_0006",
             102 => X"0000_0001",
@@ -200,10 +200,16 @@ begin
             -- ========================================
             -- Checkpoints
             -- ========================================
-            -- 90ns   - Picture 1 - On first command
+            -- 90ns    - Picture 1 - On first command
             -- 5355ns             - Before first FLIP_ARRAY
-            -- 6255ns - Picture 2 - After first FLIP_ARRAY
-            -- 9585ns - Picture 3 - After second FLIP_ARRAY
+            -- 6255ns  - Picture 2 - After first FLIP_ARRAY
+            -- 9585ns  - Picture 3
+            -- 15885ns - Picture 4
+            -- 18450ns - Picture 5
+            -- 22185ns - Picture 6
+            -- 27135ns - Picture 7
+            -- 30690ns - Picture 8
+            -- 32535ns - Picture 9
             -- ========================================
         );
     begin
