@@ -29,6 +29,7 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:35:57  MAY 20, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION 5.0
 set_global_assignment -name VERILOG_FILE l03p01q_filter.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE l03p01q_filter.vwf
 
 # Analysis & Synthesis Assignments
 # ================================
