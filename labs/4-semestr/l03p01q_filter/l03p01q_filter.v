@@ -1,22 +1,21 @@
 module RStrigger (out,x,xdop);
-   
    input x,xdop;
    output out;
    reg res;
 
    always @(xdop or x)
       begin
-        if (~xdop)
-           res = 0;
-        else
-          if (~x)
-           res = 1;
+      if (~xdop)
+         res = 0;
+      else
+         if (~x)
+         res = 1;
       end
    assign out = !res;
 endmodule
 
+// Испульсный фильтр
 module Filter (OutResult, X, A, B);
-
    input   X, A, B;
    output  OutResult;
 
@@ -30,4 +29,4 @@ module Filter (OutResult, X, A, B);
 
    and  AND1 (OutResult,ou1, ou2, ou3, ou4);
 endmodule
-         
+
