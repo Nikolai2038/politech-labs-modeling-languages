@@ -20,129 +20,112 @@ entity sort is
 end sort;
 
 architecture sort_architecture of sort is
+    -- Is sorting right now?
     signal is_working : std_logic;
+
+    -- Clock operations
     signal is_finding_max : std_logic;
     signal is_flipping : std_logic;
     signal is_flipping_saved : std_logic;
-    signal arr : massType;
-    signal id, id_max, id_inner : integer := 0;
-    signal temp : integer;
-    signal temp2 : integer;
-    signal id2 : integer;
-    signal main_cycle_stage : integer;
 
-    -- procedure flip_array(
-    --     signal arr : inout massType;
-    --     signal id2 : in integer
-    -- ) is
-    --     variable temp : integer;
-    --     variable id_inner : integer;
-    --     variable id22 : integer;
-    -- begin
-    --     id_inner := 0;
-    --     id22 := id2;
-    --     while id_inner < id22 loop
-    --         temp := arr(id22);
-    --         arr(id22) <= arr(id_inner);
-    --         arr(id_inner) <= temp;
-    --         id_inner := id_inner + 1;
-    --         id22 := id22 - 1;
-    --     end loop;
-    -- end procedure;
+    -- Extra variable to separate operations on several clocks
+    signal main_flow_clock_stage : integer;
+
+    -- Array itself
+    signal arr : massType;
+
+    signal id : integer;
+    signal id_max : integer;
+    signal id_inner : integer;
+    signal id_temp : integer;
+
+    -- Temp value 1 for switching array elements
+    signal temp_1 : integer;
+
+    -- Temp value 2 for switching array elements
+    signal temp_2 : integer;
 
 begin
-    process (clk)
+    process (clk, reset)
     begin
-        if rising_edge(clk) then
-            if reset = '1' then
-                is_working <= '0';
-                arr <= data_in;
-            else
-                if is_working = '0' then
-                    is_working <= '1';
-                    id <= 7;
-                    id_max <= id;
-                    id_inner <= 0;
-                    is_finding_max <= '1';
-                    is_flipping <= '0';
-                    is_flipping_saved <= '0';
-                    main_cycle_stage <= 1;
+        if falling_edge(reset) then
+            working <= '1';
+            arr <= data_in;
+            id <= 7;
+            id_max <= 7;
+            id_inner <= 0;
+            is_finding_max <= '1';
+            is_flipping <= '0';
+            is_flipping_saved <= '0';
+            main_flow_clock_stage <= 1;
+        elsif id >= 0 then
+            if is_finding_max = '1' then
+                if id_inner < id then
+                    if arr(id_inner) > arr(id_max) then
+                        id_max <= id_inner;
+                    end if;
+                    id_inner <= id_inner + 1;
                 else
-                    if id >= 0 then
-                        if is_finding_max = '1' then
-                            if id_inner < id then
-                                if arr(id_inner) > arr(id_max) then
-                                    id_max <= id_inner;
-                                end if;
-                                id_inner <= id_inner + 1;
-                            else
-                                is_finding_max <= '0';
-                            end if;
-                        else
-                            if is_flipping = '1' then
-                                if id_inner < id2 then
-                                    if is_flipping_saved = '0' then
-                                        temp <= arr(id2);
-                                        temp2 <= arr(id_inner);
-                                        is_flipping_saved <= '1';
-                                    else
-                                        arr(id2) <= temp2;
-                                        arr(id_inner) <= temp;
-                                        id_inner <= id_inner + 1;
-                                        id2 <= id2 - 1;
-                                        is_flipping_saved <= '0';
-                                    end if;
-                                else
-                                    is_flipping <= '0';
-
-                                    if main_cycle_stage = 1 then
-                                        main_cycle_stage <= 2;
-                                    end if;
-
-                                    if main_cycle_stage = 2 then
-                                        main_cycle_stage <= 3;
-                                    end if;
-                                end if;
-                            else
-                                if main_cycle_stage = 1 then
-                                    if id_max /= id and id_max /= 0 then
-                                        id_inner <= 0;
-                                        id2 <= id_max;
-                                        is_flipping_saved <= '0';
-                                        is_flipping <= '1';
-                                    else
-                                        main_cycle_stage <= 2;
-                                    end if;
-                                end if;
-
-                                if main_cycle_stage = 2 then
-                                    if id_max /= id then
-                                        id_inner <= 0;
-                                        id2 <= id;
-                                        is_flipping_saved <= '0';
-                                        is_flipping <= '1';
-                                    else
-                                        main_cycle_stage <= 3;
-                                    end if;
-                                end if;
-
-                                if main_cycle_stage = 3 then
-                                    id <= id - 1;
-                                    id_max <= id - 1;
-                                    id_inner <= 0;
-                                    is_finding_max <= '1';
-                                    main_cycle_stage <= 1;
-                                end if;
-                            end if;
-                        end if;
+                    is_finding_max <= '0';
+                end if;
+            elsif is_flipping = '1' then
+                if id_inner < id_temp then
+                    if is_flipping_saved = '0' then
+                        temp_1 <= arr(id_temp);
+                        temp_2 <= arr(id_inner);
+                        is_flipping_saved <= '1';
                     else
-                        is_working <= '0';
+                        arr(id_temp) <= temp_2;
+                        arr(id_inner) <= temp_1;
+                        id_inner <= id_inner + 1;
+                        id_temp <= id_temp - 1;
+                        is_flipping_saved <= '0';
+                    end if;
+                else
+                    is_flipping <= '0';
+
+                    if main_flow_clock_stage = 1 then
+                        main_flow_clock_stage <= 2;
+                    end if;
+
+                    if main_flow_clock_stage = 2 then
+                        main_flow_clock_stage <= 3;
                     end if;
                 end if;
-            end if;
-        end if;
+            else
+                if main_flow_clock_stage = 1 then
+                    if id_max /= id and id_max /= 0 then
+                        id_inner <= 0;
+                        id_temp <= id_max;
+                        is_flipping_saved <= '0';
+                        is_flipping <= '1';
+                    else
+                        main_flow_clock_stage <= 2;
+                    end if;
+                end if;
 
-        data_out <= arr;
-        working <= is_working;
+                if main_flow_clock_stage = 2 then
+                    if id_max /= id then
+                        id_inner <= 0;
+                        id_temp <= id;
+                        is_flipping_saved <= '0';
+                        is_flipping <= '1';
+                    else
+                        main_flow_clock_stage <= 3;
+                    end if;
+                end if;
+
+                if main_flow_clock_stage = 3 then
+                    id <= id - 1;
+                    id_max <= id - 1;
+                    id_inner <= 0;
+                    is_finding_max <= '1';
+                    main_flow_clock_stage <= 1;
+                end if;
+            end if;
+        else
+            working <= '0';
+            data_out <= arr;
+        end if;
     end process;
 end sort_architecture;
