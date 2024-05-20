@@ -55,7 +55,7 @@
 # Active-VHDL
 !**/4-semestr/**
 # Quartus II
-**/4-semestr/l02p03q_dp32/**
+**/4-semestr/l*q_*/**
 # Compiled info
 **/*.lib
 **/Generic/contents.lib~
@@ -79,3 +79,6 @@
 !**/*.qpf
 !**/*.qsf
 !**/*.db_info
+
+# Verilog files
+!**/*.v
