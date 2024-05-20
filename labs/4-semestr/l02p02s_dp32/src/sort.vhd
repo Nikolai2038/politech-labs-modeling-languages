@@ -48,7 +48,7 @@ architecture sort_architecture of sort is
 begin
     process (clk, reset)
     begin
-        if falling_edge(reset) then
+        if reset = '1' then
             working <= '1';
             arr <= data_in;
             id <= 7;

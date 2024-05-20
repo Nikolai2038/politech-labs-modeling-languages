@@ -1,0 +1,57 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic       
+# functions, and any output files any of the foregoing           
+# (including device programming or simulation files), and any    
+# associated documentation or information are expressly subject  
+# to the terms and conditions of the Altera Program License      
+# Subscription Agreement, Altera MegaCore Function License       
+# Agreement, or other applicable license agreement, including,   
+# without limitation, that your use is for the sole purpose of   
+# programming logic devices manufactured by Altera and sold by   
+# Altera or its authorized distributors.  Please refer to the    
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		l02p03q_dp32_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 5.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "05:14:34  MAY 20, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION 5.0
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/alu_32.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/clk_gen.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/memory.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/dp32_rtl.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/dp32_test.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/reg_file.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/mux2.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/latch.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/pc_reg.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/cc_comp.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/buffer32.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/ltch_buf.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/signext.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/rtl_test_cfg.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/sort.vhd
+set_global_assignment -name VHDL_FILE ../l02p02s_dp32/src/TestBench/sort_TB.vhd
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY Stratix
+set_global_assignment -name TOP_LEVEL_ENTITY sort
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE AUTO
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1

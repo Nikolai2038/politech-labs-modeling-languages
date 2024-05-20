@@ -1,7 +1,7 @@
 [Project]
 Current config=Generic
 VCS=0
-modified=190
+modified=197
 [Configurations]
 Generic=l02p02s_dp32
 [Files]
@@ -19,7 +19,7 @@ Generic=l02p02s_dp32
 /buffer32.vhd=4, 1 31103564 426646979, 0, , , ,
 /dp32_rtl.vhd=4, 1 31103564 374478658, 0, , , ,
 /rtl_test_cfg.vhd=4, 1 31103557 800647971, 0, , , ,
-/sort.vhd=4, 1 31107662 3184711522, 0, , , ,
+/sort.vhd=4, 1 31107670 3609592063, 0, , , ,
 TestBench/sort_TB.vhd=6, 1 31107645 4015131048, 0, 1 , , ,
 TestBench/sort_TB_runtest.do=9, 0 0 0, 0, ,
 /sort_waveform.awf=11, 0 0 0, 0, , , ,

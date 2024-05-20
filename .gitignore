@@ -49,16 +49,13 @@
 !labs/3-semestr/*.DLS
 # ========================================
 
-# Quartus II 5.0 project files
-!**/*.qpf
-!**/*.qsf
-!**/*.db_info
-
 # Shell scripts
 !**/*.sh
 
 # Active-VHDL
 !**/4-semestr/**
+# Quartus II
+**/4-semestr/l02p03q_dp32/**
 # Compiled info
 **/*.lib
 **/Generic/contents.lib~
@@ -77,3 +74,8 @@
 
 # Settings for "VHDL by HGB" VS Code extension
 !/vhdl_ls.toml
+
+# Quartus II 5.0 project files
+!**/*.qpf
+!**/*.qsf
+!**/*.db_info
