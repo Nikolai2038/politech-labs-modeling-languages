@@ -79,6 +79,7 @@
 !**/*.qpf
 !**/*.qsf
 !**/*.db_info
+!**/*.vwf
 
 # Verilog files
 !**/*.v
