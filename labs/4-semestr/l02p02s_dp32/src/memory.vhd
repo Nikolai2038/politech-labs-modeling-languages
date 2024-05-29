@@ -201,7 +201,7 @@ begin
             -- Checkpoints
             -- ========================================
             -- 90ns    - Picture 1 - On first command
-            -- 5355ns             - Before first FLIP_ARRAY
+            -- 5355ns              - Before first FLIP_ARRAY
             -- 6255ns  - Picture 2 - After first FLIP_ARRAY
             -- 9585ns  - Picture 3
             -- 15885ns - Picture 4
